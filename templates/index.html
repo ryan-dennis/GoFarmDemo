@@ -1,0 +1,74 @@
+<!doctype html>
+
+<head>
+  <title>Hello Azure - Python Quickstart</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+</head>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<html>
+
+<body>
+  <main>
+    <div class="container">
+      <h2>Posted Orders This Week</h2><br>
+      <ul class="responsive-table">
+        <li class="table-header">
+          <div class="col col-1">Job Id</div>
+          <div class="col col-2">Crop Type</div>
+          <div class="col col-3">Price per KG</div>
+          <div class="col col-4">Quantity posted</div>
+          <div class="col col-5"></div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42235</div>
+          <div class="col col-2" data-label="Customer Name">Cocoa (dryed)</div>
+          <div class="col col-3" data-label="Amount">$3</div>
+          <div class="col col-4" data-label="Payment Status">10 Kg</div>
+          <div class="col col-5" data-label="Payment Status"><button type="button"
+              class="btn btn-success">Order</button></div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42442</div>
+          <div class="col col-2" data-label="Customer Name">Cocoa (dryed)</div>
+          <div class="col col-3" data-label="Amount">$5</div>
+          <div class="col col-4" data-label="Payment Status">40 Kg</div>
+          <div class="col col-5" data-label="Payment Status"><button type="button"
+              class="btn btn-success">Order</button></div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42257</div>
+          <div class="col col-2" data-label="Customer Name">Cocoa (dryed)</div>
+          <div class="col col-3" data-label="Amount">$2.5</div>
+          <div class="col col-4" data-label="Payment Status">100 Kg</div>
+          <div class="col col-5" data-label="Payment Status"><button type="button"
+              class="btn btn-success">Order</button></div>
+        </li>
+        <li class="table-row">
+          <div class="col col-1" data-label="Job Id">42311</div>
+          <div class="col col-2" data-label="Customer Name">Cocoa (fermented)</div>
+          <div class="col col-3" data-label="Amount">$6</div>
+          <div class="col col-4" data-label="Payment Status">60 Kg</div>
+          <div class="col col-5" data-label="Payment Status"><button type="button"
+              class="btn btn-success">Order</button></div>
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="px-4 py-3 my-2 text-center">
+            <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='images/azure-icon.svg') }}" alt="Azure Logo" width="192" height="192"/>
+            <h1 class="display-6 fw-bold text-primary">Welcome to Azure</h1>            
+          </div>
+        <form method="post" action="{{url_for('hello')}}">
+            <div class="col-md-6 mx-auto text-center">
+                <label for="name" class="form-label fw-bold fs-5">Could you please tell me your name?</label>
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center align-items-center my-1">
+                    <input type="text" class="form-control" id="name" name="name" style="max-width: 256px;">
+                  </div>            
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center my-2">
+                  <button type="submit" class="btn btn-primary btn-lg px-4 gap-3">Say Hello</button>
+                </div>            
+            </div>
+        </form> -->
+  </main>
+</body>
+
+</html>
