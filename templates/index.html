@@ -13,7 +13,7 @@
     <div class="container">
       <br>
       <h2>Posted Orders This Week</h2><br>
-      <ul class="responsive-table">
+      <ul class="responsive-table" id="orderTable">
         <li class="table-header">
           <div class="col col-1">Job Id</div>
           <div class="col col-2">Crop Type</div>
@@ -21,7 +21,7 @@
           <div class="col col-4">Quantity posted</div>
           <div class="col col-5"></div>
         </li>
-        <li class="table-row">
+        <li class="table-row" id="firstEntry">
           <div class="col col-1" data-label="Job Id">42235</div>
           <div class="col col-2" data-label="Customer Name">Cocoa (dryed)</div>
           <div class="col col-3" data-label="Amount">$3</div>
@@ -57,6 +57,7 @@
     </div>
   </main>
   <script>
+    document.addEventListener('keydown', add_row);
     function purchase_order(btn) {
       var row = btn.parentNode.parentNode;
       $.ajax({
@@ -67,6 +68,49 @@
         alert('Order placed!');
       });
     }
+
+    function add_row(e) {
+      if (e.key.length == 1) {
+        $.ajax({
+          type: "POST",
+          url: "/add_row"
+        }).done(function (data) {
+          var json = JSON.parse(data);
+          var table = document.getElementById("orderTable");
+          var row = document.createElement('li');
+          // row.appendChild(document.createTextNode('hello'));
+          // table.appendChild(row);
+          row.innerHTML = [
+            '<div class="col col-1" data-label="Job Id">42801</div>',
+            '<div class="col col-2" data-label="Customer Name">' + json.crop_type + '</div>',
+            '<div class="col col-3" data-label="Amount">$' + json.price + '</div>',
+            '<div class="col col-4" data-label="Payment Status">' + json.quantity + ' Kg</div>',
+            '<div class="col col-5" data-label="Payment Status"><button type="button" class="btn btn-success"',
+            'onclick="purchase_order(this)">Order</button></div>'
+          ].join('');
+          row.className = 'table-row';
+          table.insertBefore(row, document.getElementById('firstEntry'));
+          // var row = table.insertRow(1);
+          // var cell1 = table.insertCell(0);
+          // var cell2 = table.insertCell(1);
+          // var cell3 = table.insertCell(2);
+          // var cell4 = table.insertCell(3);
+          // var cell5 = table.insertCell(4);
+          // cell1.innerHTML = '41418';
+          // cell2.innerHTML = json.crop_type;
+          // cell3.innerHTML = json.price;
+          // cell4.innerHTML = json.quantity;
+          // cell5.innerHTML = [
+          //   '<button type="button" class="btn btn-success"', 'onclick="purchase_order(this)">Order</button>'
+          // ].join('');
+
+          // $("tr").each(function () {
+          //   $(this).addClass('col col-1');
+          // })
+        });
+      }
+    }
+
   </script>
 </body>
 
