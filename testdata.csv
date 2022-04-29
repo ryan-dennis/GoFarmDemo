@@ -1,0 +1,1000 @@
+0,Wheat,24,68,Ghana
+1,Cocoa,14,444,Ivory Coast
+2,Cocoa,28,397,Ivory Coast
+3,Wheat,21,367,Ghana
+4,Corn,6,284,Panema
+5,Cocoa,15,472,Ivory Coast
+6,Corn,21,30,Panema
+7,Wheat,27,45,Ghana
+8,Cocoa,23,36,Ivory Coast
+9,Grain,23,489,Guatemala
+10,Wheat,18,194,Ghana
+11,Wheat,5,311,Ghana
+12,Wheat,14,52,Ghana
+13,Corn,13,422,Panema
+14,Corn,26,432,Panema
+15,Cocoa,9,45,Ivory Coast
+16,Corn,22,245,Panema
+17,Grain,8,60,Guatemala
+18,Cocoa,15,88,Ivory Coast
+19,Wheat,10,51,Ghana
+20,Cocoa,7,378,Ivory Coast
+21,Corn,17,173,Panema
+22,Cocoa,15,442,Ivory Coast
+23,Corn,9,475,Panema
+24,Grain,15,116,Guatemala
+25,Grain,15,184,Guatemala
+26,Cocoa,23,499,Ivory Coast
+27,Grain,17,364,Guatemala
+28,Wheat,16,346,Ghana
+29,Grain,29,37,Guatemala
+30,Grain,10,330,Guatemala
+31,Cocoa,30,164,Ivory Coast
+32,Cocoa,5,54,Ivory Coast
+33,Corn,15,91,Panema
+34,Wheat,14,367,Ghana
+35,Cocoa,30,40,Ivory Coast
+36,Grain,25,431,Guatemala
+37,Cocoa,28,31,Ivory Coast
+38,Grain,12,116,Guatemala
+39,Wheat,5,106,Ghana
+40,Grain,6,143,Guatemala
+41,Grain,14,471,Guatemala
+42,Grain,29,88,Guatemala
+43,Grain,25,267,Guatemala
+44,Wheat,28,85,Ghana
+45,Wheat,13,68,Ghana
+46,Corn,22,298,Panema
+47,Grain,6,469,Guatemala
+48,Grain,16,326,Guatemala
+49,Wheat,17,485,Ghana
+50,Corn,9,11,Panema
+51,Cocoa,20,148,Ivory Coast
+52,Cocoa,19,24,Ivory Coast
+53,Grain,18,291,Guatemala
+54,Grain,28,325,Guatemala
+55,Wheat,15,412,Ghana
+56,Grain,10,349,Guatemala
+57,Corn,18,425,Panema
+58,Corn,14,480,Panema
+59,Grain,23,145,Guatemala
+60,Wheat,15,272,Ghana
+61,Corn,10,94,Panema
+62,Cocoa,19,177,Ivory Coast
+63,Cocoa,29,281,Ivory Coast
+64,Cocoa,17,21,Ivory Coast
+65,Cocoa,15,13,Ivory Coast
+66,Corn,12,141,Panema
+67,Grain,9,282,Guatemala
+68,Cocoa,8,206,Ivory Coast
+69,Wheat,10,163,Ghana
+70,Wheat,26,479,Ghana
+71,Corn,14,280,Panema
+72,Corn,13,60,Panema
+73,Corn,18,104,Panema
+74,Corn,23,315,Panema
+75,Wheat,10,418,Ghana
+76,Grain,6,330,Guatemala
+77,Corn,29,290,Panema
+78,Cocoa,22,420,Ivory Coast
+79,Cocoa,10,397,Ivory Coast
+80,Grain,11,255,Guatemala
+81,Wheat,5,63,Ghana
+82,Wheat,5,475,Ghana
+83,Corn,10,309,Panema
+84,Cocoa,27,423,Ivory Coast
+85,Corn,11,348,Panema
+86,Wheat,26,469,Ghana
+87,Wheat,15,247,Ghana
+88,Corn,15,330,Panema
+89,Corn,25,300,Panema
+90,Corn,23,353,Panema
+91,Cocoa,9,287,Ivory Coast
+92,Wheat,10,337,Ghana
+93,Cocoa,23,52,Ivory Coast
+94,Grain,20,341,Guatemala
+95,Cocoa,23,362,Ivory Coast
+96,Corn,26,252,Panema
+97,Wheat,22,344,Ghana
+98,Grain,22,44,Guatemala
+99,Wheat,29,96,Ghana
+100,Wheat,18,209,Ghana
+101,Wheat,22,304,Ghana
+102,Wheat,22,230,Ghana
+103,Wheat,19,198,Ghana
+104,Wheat,18,473,Ghana
+105,Grain,13,16,Guatemala
+106,Corn,20,494,Panema
+107,Cocoa,21,381,Ivory Coast
+108,Corn,25,251,Panema
+109,Cocoa,9,115,Ivory Coast
+110,Grain,6,415,Guatemala
+111,Grain,15,65,Guatemala
+112,Grain,20,165,Guatemala
+113,Corn,12,284,Panema
+114,Corn,14,201,Panema
+115,Wheat,17,462,Ghana
+116,Wheat,17,50,Ghana
+117,Corn,29,124,Panema
+118,Wheat,15,411,Ghana
+119,Grain,26,416,Guatemala
+120,Cocoa,27,491,Ivory Coast
+121,Grain,12,324,Guatemala
+122,Grain,23,109,Guatemala
+123,Grain,13,130,Guatemala
+124,Cocoa,12,206,Ivory Coast
+125,Cocoa,28,339,Ivory Coast
+126,Corn,6,253,Panema
+127,Wheat,12,340,Ghana
+128,Cocoa,14,176,Ivory Coast
+129,Corn,23,323,Panema
+130,Corn,13,72,Panema
+131,Wheat,22,413,Ghana
+132,Wheat,28,56,Ghana
+133,Wheat,13,481,Ghana
+134,Wheat,8,54,Ghana
+135,Corn,10,364,Panema
+136,Grain,24,225,Guatemala
+137,Corn,24,454,Panema
+138,Cocoa,27,172,Ivory Coast
+139,Grain,10,477,Guatemala
+140,Wheat,18,87,Ghana
+141,Cocoa,26,206,Ivory Coast
+142,Corn,24,67,Panema
+143,Cocoa,10,179,Ivory Coast
+144,Corn,16,484,Panema
+145,Corn,18,386,Panema
+146,Corn,6,272,Panema
+147,Corn,29,224,Panema
+148,Wheat,6,398,Ghana
+149,Grain,13,369,Guatemala
+150,Wheat,29,122,Ghana
+151,Wheat,17,422,Ghana
+152,Grain,10,285,Guatemala
+153,Corn,30,63,Panema
+154,Wheat,10,472,Ghana
+155,Wheat,12,424,Ghana
+156,Grain,6,51,Guatemala
+157,Cocoa,26,303,Ivory Coast
+158,Grain,9,416,Guatemala
+159,Wheat,28,266,Ghana
+160,Cocoa,18,480,Ivory Coast
+161,Corn,13,211,Panema
+162,Corn,14,322,Panema
+163,Corn,11,338,Panema
+164,Cocoa,12,157,Ivory Coast
+165,Cocoa,29,497,Ivory Coast
+166,Corn,24,233,Panema
+167,Grain,17,429,Guatemala
+168,Wheat,18,397,Ghana
+169,Corn,12,53,Panema
+170,Cocoa,5,366,Ivory Coast
+171,Wheat,12,395,Ghana
+172,Cocoa,15,405,Ivory Coast
+173,Corn,15,297,Panema
+174,Wheat,7,333,Ghana
+175,Corn,14,467,Panema
+176,Corn,7,247,Panema
+177,Wheat,7,300,Ghana
+178,Grain,24,319,Guatemala
+179,Grain,20,33,Guatemala
+180,Grain,10,362,Guatemala
+181,Wheat,14,317,Ghana
+182,Cocoa,22,266,Ivory Coast
+183,Corn,29,325,Panema
+184,Corn,5,429,Panema
+185,Wheat,29,58,Ghana
+186,Cocoa,7,149,Ivory Coast
+187,Grain,25,410,Guatemala
+188,Cocoa,30,224,Ivory Coast
+189,Cocoa,14,45,Ivory Coast
+190,Wheat,17,97,Ghana
+191,Cocoa,11,463,Ivory Coast
+192,Grain,19,180,Guatemala
+193,Wheat,15,305,Ghana
+194,Corn,23,451,Panema
+195,Grain,29,303,Guatemala
+196,Grain,22,276,Guatemala
+197,Wheat,18,272,Ghana
+198,Wheat,27,74,Ghana
+199,Wheat,19,239,Ghana
+200,Corn,14,461,Panema
+201,Grain,30,16,Guatemala
+202,Corn,8,130,Panema
+203,Cocoa,27,347,Ivory Coast
+204,Wheat,24,434,Ghana
+205,Grain,28,432,Guatemala
+206,Wheat,18,461,Ghana
+207,Corn,12,278,Panema
+208,Wheat,21,464,Ghana
+209,Corn,7,222,Panema
+210,Grain,23,171,Guatemala
+211,Corn,7,450,Panema
+212,Grain,24,298,Guatemala
+213,Corn,21,37,Panema
+214,Cocoa,26,353,Ivory Coast
+215,Grain,14,390,Guatemala
+216,Grain,13,156,Guatemala
+217,Corn,8,28,Panema
+218,Wheat,12,381,Ghana
+219,Cocoa,29,262,Ivory Coast
+220,Corn,5,457,Panema
+221,Corn,30,367,Panema
+222,Wheat,10,270,Ghana
+223,Wheat,18,237,Ghana
+224,Grain,10,283,Guatemala
+225,Wheat,26,485,Ghana
+226,Wheat,19,395,Ghana
+227,Corn,30,55,Panema
+228,Cocoa,5,31,Ivory Coast
+229,Wheat,5,76,Ghana
+230,Wheat,30,80,Ghana
+231,Corn,16,106,Panema
+232,Cocoa,16,412,Ivory Coast
+233,Cocoa,11,479,Ivory Coast
+234,Grain,15,255,Guatemala
+235,Grain,9,472,Guatemala
+236,Wheat,27,330,Ghana
+237,Corn,16,334,Panema
+238,Cocoa,8,142,Ivory Coast
+239,Corn,25,197,Panema
+240,Corn,13,65,Panema
+241,Grain,11,159,Guatemala
+242,Grain,9,22,Guatemala
+243,Grain,5,430,Guatemala
+244,Cocoa,15,331,Ivory Coast
+245,Corn,24,236,Panema
+246,Cocoa,26,339,Ivory Coast
+247,Cocoa,26,44,Ivory Coast
+248,Cocoa,13,463,Ivory Coast
+249,Grain,26,16,Guatemala
+250,Corn,5,371,Panema
+251,Cocoa,14,105,Ivory Coast
+252,Grain,5,237,Guatemala
+253,Corn,11,153,Panema
+254,Wheat,14,224,Ghana
+255,Wheat,24,66,Ghana
+256,Wheat,25,452,Ghana
+257,Corn,12,103,Panema
+258,Grain,10,180,Guatemala
+259,Cocoa,10,399,Ivory Coast
+260,Corn,9,463,Panema
+261,Corn,15,343,Panema
+262,Corn,14,325,Panema
+263,Grain,30,35,Guatemala
+264,Wheat,13,98,Ghana
+265,Grain,19,196,Guatemala
+266,Corn,25,135,Panema
+267,Wheat,29,373,Ghana
+268,Wheat,27,60,Ghana
+269,Grain,8,255,Guatemala
+270,Wheat,26,338,Ghana
+271,Wheat,21,374,Ghana
+272,Cocoa,23,224,Ivory Coast
+273,Grain,17,253,Guatemala
+274,Wheat,8,68,Ghana
+275,Grain,9,404,Guatemala
+276,Cocoa,11,87,Ivory Coast
+277,Wheat,19,337,Ghana
+278,Cocoa,16,430,Ivory Coast
+279,Wheat,9,324,Ghana
+280,Grain,17,413,Guatemala
+281,Cocoa,24,281,Ivory Coast
+282,Corn,22,65,Panema
+283,Wheat,21,53,Ghana
+284,Corn,26,144,Panema
+285,Wheat,24,258,Ghana
+286,Cocoa,18,126,Ivory Coast
+287,Grain,18,173,Guatemala
+288,Grain,6,397,Guatemala
+289,Wheat,20,490,Ghana
+290,Corn,15,100,Panema
+291,Wheat,16,361,Ghana
+292,Corn,19,443,Panema
+293,Cocoa,13,185,Ivory Coast
+294,Wheat,9,345,Ghana
+295,Cocoa,27,373,Ivory Coast
+296,Cocoa,13,117,Ivory Coast
+297,Grain,14,46,Guatemala
+298,Wheat,23,358,Ghana
+299,Cocoa,18,59,Ivory Coast
+300,Wheat,10,57,Ghana
+301,Wheat,10,389,Ghana
+302,Grain,22,82,Guatemala
+303,Cocoa,23,72,Ivory Coast
+304,Grain,8,389,Guatemala
+305,Grain,18,400,Guatemala
+306,Corn,10,122,Panema
+307,Corn,24,347,Panema
+308,Corn,12,409,Panema
+309,Corn,24,254,Panema
+310,Corn,26,54,Panema
+311,Cocoa,16,167,Ivory Coast
+312,Corn,24,10,Panema
+313,Corn,16,93,Panema
+314,Corn,23,162,Panema
+315,Corn,7,206,Panema
+316,Wheat,27,148,Ghana
+317,Grain,27,441,Guatemala
+318,Grain,12,43,Guatemala
+319,Cocoa,28,431,Ivory Coast
+320,Cocoa,28,16,Ivory Coast
+321,Wheat,20,227,Ghana
+322,Wheat,13,227,Ghana
+323,Corn,5,217,Panema
+324,Cocoa,7,213,Ivory Coast
+325,Grain,9,369,Guatemala
+326,Grain,20,405,Guatemala
+327,Cocoa,5,417,Ivory Coast
+328,Corn,22,409,Panema
+329,Cocoa,16,314,Ivory Coast
+330,Grain,22,63,Guatemala
+331,Cocoa,17,252,Ivory Coast
+332,Cocoa,20,249,Ivory Coast
+333,Cocoa,16,312,Ivory Coast
+334,Corn,28,380,Panema
+335,Grain,17,107,Guatemala
+336,Wheat,6,278,Ghana
+337,Wheat,8,287,Ghana
+338,Grain,28,276,Guatemala
+339,Cocoa,23,92,Ivory Coast
+340,Cocoa,21,397,Ivory Coast
+341,Wheat,19,89,Ghana
+342,Grain,22,231,Guatemala
+343,Grain,12,233,Guatemala
+344,Grain,17,229,Guatemala
+345,Corn,13,102,Panema
+346,Wheat,7,432,Ghana
+347,Corn,28,66,Panema
+348,Cocoa,23,40,Ivory Coast
+349,Cocoa,18,37,Ivory Coast
+350,Grain,26,425,Guatemala
+351,Cocoa,5,185,Ivory Coast
+352,Wheat,23,470,Ghana
+353,Corn,15,455,Panema
+354,Wheat,16,324,Ghana
+355,Wheat,27,116,Ghana
+356,Grain,15,173,Guatemala
+357,Corn,11,408,Panema
+358,Grain,20,289,Guatemala
+359,Corn,30,98,Panema
+360,Corn,24,34,Panema
+361,Wheat,27,213,Ghana
+362,Corn,7,241,Panema
+363,Corn,21,116,Panema
+364,Cocoa,29,302,Ivory Coast
+365,Cocoa,29,102,Ivory Coast
+366,Wheat,8,460,Ghana
+367,Wheat,6,235,Ghana
+368,Corn,30,204,Panema
+369,Cocoa,30,34,Ivory Coast
+370,Wheat,28,12,Ghana
+371,Cocoa,8,269,Ivory Coast
+372,Corn,26,334,Panema
+373,Wheat,27,457,Ghana
+374,Grain,15,74,Guatemala
+375,Corn,23,498,Panema
+376,Grain,8,152,Guatemala
+377,Grain,7,150,Guatemala
+378,Corn,23,246,Panema
+379,Corn,25,477,Panema
+380,Wheat,5,489,Ghana
+381,Corn,24,184,Panema
+382,Grain,18,232,Guatemala
+383,Cocoa,24,305,Ivory Coast
+384,Corn,29,187,Panema
+385,Wheat,13,390,Ghana
+386,Wheat,10,85,Ghana
+387,Wheat,8,158,Ghana
+388,Grain,17,61,Guatemala
+389,Corn,13,84,Panema
+390,Cocoa,15,418,Ivory Coast
+391,Wheat,8,143,Ghana
+392,Grain,10,170,Guatemala
+393,Cocoa,20,83,Ivory Coast
+394,Wheat,28,466,Ghana
+395,Corn,5,222,Panema
+396,Corn,20,361,Panema
+397,Corn,24,309,Panema
+398,Grain,18,23,Guatemala
+399,Cocoa,5,206,Ivory Coast
+400,Grain,24,432,Guatemala
+401,Wheat,28,345,Ghana
+402,Grain,11,318,Guatemala
+403,Grain,27,215,Guatemala
+404,Cocoa,25,41,Ivory Coast
+405,Cocoa,24,52,Ivory Coast
+406,Cocoa,25,51,Ivory Coast
+407,Cocoa,9,63,Ivory Coast
+408,Corn,29,121,Panema
+409,Corn,24,467,Panema
+410,Wheat,5,254,Ghana
+411,Cocoa,30,236,Ivory Coast
+412,Wheat,16,25,Ghana
+413,Corn,19,166,Panema
+414,Wheat,17,341,Ghana
+415,Corn,19,291,Panema
+416,Corn,23,466,Panema
+417,Wheat,26,98,Ghana
+418,Cocoa,30,31,Ivory Coast
+419,Grain,14,167,Guatemala
+420,Corn,20,67,Panema
+421,Cocoa,28,135,Ivory Coast
+422,Corn,30,439,Panema
+423,Corn,8,61,Panema
+424,Grain,24,473,Guatemala
+425,Grain,16,59,Guatemala
+426,Cocoa,30,384,Ivory Coast
+427,Wheat,5,409,Ghana
+428,Grain,23,149,Guatemala
+429,Corn,11,23,Panema
+430,Grain,30,348,Guatemala
+431,Grain,10,94,Guatemala
+432,Corn,22,249,Panema
+433,Wheat,23,492,Ghana
+434,Grain,26,180,Guatemala
+435,Cocoa,10,163,Ivory Coast
+436,Corn,28,416,Panema
+437,Cocoa,25,294,Ivory Coast
+438,Corn,27,212,Panema
+439,Wheat,30,72,Ghana
+440,Cocoa,19,309,Ivory Coast
+441,Grain,22,400,Guatemala
+442,Grain,26,240,Guatemala
+443,Cocoa,15,154,Ivory Coast
+444,Cocoa,30,305,Ivory Coast
+445,Cocoa,27,252,Ivory Coast
+446,Corn,28,101,Panema
+447,Corn,15,352,Panema
+448,Corn,25,468,Panema
+449,Wheat,12,293,Ghana
+450,Corn,11,104,Panema
+451,Grain,21,41,Guatemala
+452,Corn,25,371,Panema
+453,Corn,26,168,Panema
+454,Grain,7,138,Guatemala
+455,Cocoa,5,374,Ivory Coast
+456,Grain,27,202,Guatemala
+457,Wheat,24,368,Ghana
+458,Corn,14,42,Panema
+459,Wheat,5,487,Ghana
+460,Wheat,8,124,Ghana
+461,Grain,14,213,Guatemala
+462,Grain,10,304,Guatemala
+463,Cocoa,18,454,Ivory Coast
+464,Corn,10,486,Panema
+465,Grain,22,474,Guatemala
+466,Grain,14,18,Guatemala
+467,Cocoa,15,251,Ivory Coast
+468,Wheat,25,85,Ghana
+469,Grain,17,453,Guatemala
+470,Grain,29,52,Guatemala
+471,Cocoa,20,69,Ivory Coast
+472,Cocoa,15,351,Ivory Coast
+473,Corn,15,399,Panema
+474,Wheat,23,484,Ghana
+475,Corn,20,171,Panema
+476,Corn,25,450,Panema
+477,Corn,7,402,Panema
+478,Cocoa,15,291,Ivory Coast
+479,Corn,15,249,Panema
+480,Corn,27,454,Panema
+481,Corn,18,245,Panema
+482,Grain,16,365,Guatemala
+483,Cocoa,12,385,Ivory Coast
+484,Wheat,6,295,Ghana
+485,Corn,11,437,Panema
+486,Grain,7,181,Guatemala
+487,Cocoa,13,117,Ivory Coast
+488,Grain,24,427,Guatemala
+489,Cocoa,21,103,Ivory Coast
+490,Corn,8,449,Panema
+491,Grain,29,300,Guatemala
+492,Grain,12,454,Guatemala
+493,Wheat,13,241,Ghana
+494,Cocoa,10,165,Ivory Coast
+495,Cocoa,7,257,Ivory Coast
+496,Grain,15,197,Guatemala
+497,Corn,16,408,Panema
+498,Wheat,29,222,Ghana
+499,Cocoa,5,250,Ivory Coast
+500,Cocoa,17,498,Ivory Coast
+501,Wheat,8,52,Ghana
+502,Corn,10,220,Panema
+503,Cocoa,14,177,Ivory Coast
+504,Corn,16,246,Panema
+505,Wheat,6,338,Ghana
+506,Grain,23,412,Guatemala
+507,Grain,11,179,Guatemala
+508,Cocoa,11,117,Ivory Coast
+509,Wheat,22,109,Ghana
+510,Grain,6,380,Guatemala
+511,Cocoa,22,399,Ivory Coast
+512,Cocoa,30,330,Ivory Coast
+513,Cocoa,16,217,Ivory Coast
+514,Cocoa,13,155,Ivory Coast
+515,Corn,18,66,Panema
+516,Wheat,18,312,Ghana
+517,Grain,27,355,Guatemala
+518,Wheat,18,202,Ghana
+519,Cocoa,22,135,Ivory Coast
+520,Wheat,5,354,Ghana
+521,Grain,29,206,Guatemala
+522,Corn,16,436,Panema
+523,Wheat,21,392,Ghana
+524,Grain,18,120,Guatemala
+525,Wheat,17,202,Ghana
+526,Corn,26,297,Panema
+527,Corn,28,226,Panema
+528,Grain,23,352,Guatemala
+529,Wheat,15,205,Ghana
+530,Grain,29,377,Guatemala
+531,Corn,6,58,Panema
+532,Corn,30,384,Panema
+533,Grain,16,339,Guatemala
+534,Wheat,12,108,Ghana
+535,Cocoa,6,442,Ivory Coast
+536,Wheat,25,95,Ghana
+537,Grain,7,201,Guatemala
+538,Wheat,16,41,Ghana
+539,Wheat,16,414,Ghana
+540,Grain,22,90,Guatemala
+541,Wheat,11,463,Ghana
+542,Wheat,6,466,Ghana
+543,Wheat,17,153,Ghana
+544,Grain,8,88,Guatemala
+545,Grain,11,130,Guatemala
+546,Corn,27,306,Panema
+547,Grain,27,29,Guatemala
+548,Corn,27,117,Panema
+549,Cocoa,10,426,Ivory Coast
+550,Cocoa,5,304,Ivory Coast
+551,Cocoa,23,40,Ivory Coast
+552,Grain,18,197,Guatemala
+553,Corn,8,232,Panema
+554,Grain,29,314,Guatemala
+555,Grain,28,358,Guatemala
+556,Corn,21,392,Panema
+557,Wheat,24,74,Ghana
+558,Cocoa,28,47,Ivory Coast
+559,Cocoa,11,427,Ivory Coast
+560,Corn,10,282,Panema
+561,Cocoa,18,406,Ivory Coast
+562,Corn,20,471,Panema
+563,Grain,9,364,Guatemala
+564,Wheat,9,230,Ghana
+565,Grain,9,27,Guatemala
+566,Cocoa,15,411,Ivory Coast
+567,Cocoa,25,327,Ivory Coast
+568,Wheat,21,296,Ghana
+569,Grain,11,132,Guatemala
+570,Cocoa,27,494,Ivory Coast
+571,Wheat,5,205,Ghana
+572,Corn,5,379,Panema
+573,Cocoa,10,362,Ivory Coast
+574,Wheat,11,288,Ghana
+575,Wheat,17,70,Ghana
+576,Wheat,28,24,Ghana
+577,Corn,30,273,Panema
+578,Cocoa,23,296,Ivory Coast
+579,Wheat,20,123,Ghana
+580,Grain,20,183,Guatemala
+581,Corn,12,453,Panema
+582,Cocoa,30,398,Ivory Coast
+583,Grain,18,317,Guatemala
+584,Wheat,9,300,Ghana
+585,Cocoa,23,424,Ivory Coast
+586,Corn,17,205,Panema
+587,Cocoa,20,150,Ivory Coast
+588,Corn,24,343,Panema
+589,Cocoa,18,168,Ivory Coast
+590,Corn,18,377,Panema
+591,Cocoa,25,494,Ivory Coast
+592,Grain,7,168,Guatemala
+593,Corn,29,142,Panema
+594,Corn,14,457,Panema
+595,Grain,13,360,Guatemala
+596,Cocoa,21,272,Ivory Coast
+597,Grain,9,295,Guatemala
+598,Wheat,22,208,Ghana
+599,Wheat,30,430,Ghana
+600,Cocoa,13,366,Ivory Coast
+601,Grain,28,116,Guatemala
+602,Wheat,24,346,Ghana
+603,Wheat,15,177,Ghana
+604,Corn,8,371,Panema
+605,Grain,17,312,Guatemala
+606,Grain,27,325,Guatemala
+607,Grain,20,170,Guatemala
+608,Grain,26,322,Guatemala
+609,Wheat,14,353,Ghana
+610,Grain,30,74,Guatemala
+611,Corn,7,254,Panema
+612,Corn,17,134,Panema
+613,Corn,6,237,Panema
+614,Corn,5,13,Panema
+615,Cocoa,12,91,Ivory Coast
+616,Wheat,19,454,Ghana
+617,Cocoa,11,440,Ivory Coast
+618,Grain,6,316,Guatemala
+619,Grain,6,335,Guatemala
+620,Corn,7,332,Panema
+621,Wheat,25,205,Ghana
+622,Wheat,6,37,Ghana
+623,Grain,27,124,Guatemala
+624,Wheat,23,91,Ghana
+625,Wheat,17,154,Ghana
+626,Grain,6,338,Guatemala
+627,Cocoa,26,115,Ivory Coast
+628,Cocoa,26,241,Ivory Coast
+629,Cocoa,19,471,Ivory Coast
+630,Wheat,23,75,Ghana
+631,Wheat,24,195,Ghana
+632,Corn,10,31,Panema
+633,Grain,6,204,Guatemala
+634,Grain,11,384,Guatemala
+635,Cocoa,20,345,Ivory Coast
+636,Corn,17,436,Panema
+637,Wheat,27,327,Ghana
+638,Grain,18,91,Guatemala
+639,Grain,5,369,Guatemala
+640,Corn,27,424,Panema
+641,Cocoa,8,28,Ivory Coast
+642,Corn,20,279,Panema
+643,Grain,5,453,Guatemala
+644,Grain,22,274,Guatemala
+645,Wheat,23,309,Ghana
+646,Grain,18,78,Guatemala
+647,Corn,16,114,Panema
+648,Wheat,14,130,Ghana
+649,Grain,19,200,Guatemala
+650,Wheat,29,33,Ghana
+651,Corn,28,30,Panema
+652,Cocoa,5,455,Ivory Coast
+653,Wheat,30,171,Ghana
+654,Cocoa,30,287,Ivory Coast
+655,Cocoa,26,316,Ivory Coast
+656,Cocoa,30,332,Ivory Coast
+657,Wheat,21,297,Ghana
+658,Wheat,12,168,Ghana
+659,Cocoa,29,349,Ivory Coast
+660,Corn,9,137,Panema
+661,Corn,16,445,Panema
+662,Wheat,17,272,Ghana
+663,Cocoa,5,98,Ivory Coast
+664,Wheat,26,440,Ghana
+665,Corn,21,194,Panema
+666,Corn,8,356,Panema
+667,Grain,20,253,Guatemala
+668,Grain,29,32,Guatemala
+669,Corn,15,293,Panema
+670,Grain,30,108,Guatemala
+671,Corn,20,454,Panema
+672,Cocoa,14,259,Ivory Coast
+673,Wheat,7,345,Ghana
+674,Grain,6,255,Guatemala
+675,Wheat,22,239,Ghana
+676,Grain,19,299,Guatemala
+677,Grain,13,153,Guatemala
+678,Wheat,23,379,Ghana
+679,Grain,13,110,Guatemala
+680,Cocoa,18,103,Ivory Coast
+681,Wheat,10,92,Ghana
+682,Wheat,12,447,Ghana
+683,Cocoa,5,35,Ivory Coast
+684,Corn,21,22,Panema
+685,Corn,12,108,Panema
+686,Cocoa,21,364,Ivory Coast
+687,Cocoa,7,234,Ivory Coast
+688,Cocoa,13,145,Ivory Coast
+689,Cocoa,25,325,Ivory Coast
+690,Wheat,11,266,Ghana
+691,Cocoa,10,168,Ivory Coast
+692,Corn,21,375,Panema
+693,Corn,29,224,Panema
+694,Grain,26,117,Guatemala
+695,Corn,12,244,Panema
+696,Corn,24,158,Panema
+697,Corn,16,195,Panema
+698,Wheat,27,301,Ghana
+699,Cocoa,18,61,Ivory Coast
+700,Corn,14,83,Panema
+701,Corn,27,315,Panema
+702,Corn,16,451,Panema
+703,Cocoa,27,323,Ivory Coast
+704,Corn,19,289,Panema
+705,Corn,14,169,Panema
+706,Corn,30,172,Panema
+707,Corn,6,153,Panema
+708,Grain,26,67,Guatemala
+709,Grain,25,155,Guatemala
+710,Wheat,16,249,Ghana
+711,Wheat,20,355,Ghana
+712,Grain,26,210,Guatemala
+713,Wheat,16,376,Ghana
+714,Corn,19,447,Panema
+715,Wheat,30,208,Ghana
+716,Wheat,16,65,Ghana
+717,Grain,23,164,Guatemala
+718,Wheat,28,86,Ghana
+719,Corn,13,422,Panema
+720,Grain,14,352,Guatemala
+721,Wheat,16,300,Ghana
+722,Cocoa,18,198,Ivory Coast
+723,Grain,26,340,Guatemala
+724,Corn,5,127,Panema
+725,Cocoa,21,148,Ivory Coast
+726,Corn,6,218,Panema
+727,Corn,15,279,Panema
+728,Corn,25,477,Panema
+729,Corn,19,150,Panema
+730,Wheat,10,382,Ghana
+731,Grain,30,316,Guatemala
+732,Grain,28,372,Guatemala
+733,Wheat,15,469,Ghana
+734,Wheat,30,117,Ghana
+735,Corn,6,322,Panema
+736,Grain,9,494,Guatemala
+737,Corn,21,309,Panema
+738,Wheat,7,316,Ghana
+739,Grain,6,299,Guatemala
+740,Wheat,5,306,Ghana
+741,Grain,9,147,Guatemala
+742,Corn,24,78,Panema
+743,Grain,25,430,Guatemala
+744,Grain,27,374,Guatemala
+745,Wheat,15,248,Ghana
+746,Grain,9,459,Guatemala
+747,Grain,21,45,Guatemala
+748,Cocoa,9,175,Ivory Coast
+749,Corn,11,14,Panema
+750,Cocoa,18,262,Ivory Coast
+751,Wheat,21,12,Ghana
+752,Cocoa,23,28,Ivory Coast
+753,Grain,24,183,Guatemala
+754,Cocoa,21,243,Ivory Coast
+755,Wheat,26,441,Ghana
+756,Cocoa,29,399,Ivory Coast
+757,Cocoa,29,452,Ivory Coast
+758,Cocoa,6,79,Ivory Coast
+759,Cocoa,24,72,Ivory Coast
+760,Cocoa,9,140,Ivory Coast
+761,Corn,5,172,Panema
+762,Corn,22,453,Panema
+763,Cocoa,22,288,Ivory Coast
+764,Wheat,10,144,Ghana
+765,Corn,5,26,Panema
+766,Cocoa,6,145,Ivory Coast
+767,Corn,22,211,Panema
+768,Cocoa,11,280,Ivory Coast
+769,Grain,12,75,Guatemala
+770,Wheat,30,311,Ghana
+771,Cocoa,18,486,Ivory Coast
+772,Wheat,8,202,Ghana
+773,Corn,28,200,Panema
+774,Corn,10,121,Panema
+775,Cocoa,21,307,Ivory Coast
+776,Grain,29,123,Guatemala
+777,Grain,20,493,Guatemala
+778,Grain,18,357,Guatemala
+779,Wheat,16,222,Ghana
+780,Cocoa,23,349,Ivory Coast
+781,Corn,16,239,Panema
+782,Corn,6,257,Panema
+783,Wheat,19,194,Ghana
+784,Cocoa,27,80,Ivory Coast
+785,Cocoa,30,303,Ivory Coast
+786,Grain,12,124,Guatemala
+787,Corn,9,72,Panema
+788,Corn,15,344,Panema
+789,Grain,17,315,Guatemala
+790,Corn,21,179,Panema
+791,Corn,21,100,Panema
+792,Corn,21,158,Panema
+793,Wheat,18,284,Ghana
+794,Corn,16,52,Panema
+795,Corn,7,395,Panema
+796,Wheat,26,173,Ghana
+797,Wheat,6,91,Ghana
+798,Grain,14,73,Guatemala
+799,Corn,16,357,Panema
+800,Grain,20,490,Guatemala
+801,Cocoa,28,12,Ivory Coast
+802,Wheat,17,239,Ghana
+803,Cocoa,27,332,Ivory Coast
+804,Cocoa,8,464,Ivory Coast
+805,Corn,28,256,Panema
+806,Wheat,25,75,Ghana
+807,Corn,15,66,Panema
+808,Corn,17,193,Panema
+809,Corn,12,260,Panema
+810,Corn,8,161,Panema
+811,Cocoa,17,485,Ivory Coast
+812,Wheat,27,147,Ghana
+813,Wheat,8,422,Ghana
+814,Cocoa,18,498,Ivory Coast
+815,Wheat,27,153,Ghana
+816,Cocoa,18,451,Ivory Coast
+817,Wheat,23,245,Ghana
+818,Wheat,27,341,Ghana
+819,Cocoa,29,309,Ivory Coast
+820,Wheat,28,44,Ghana
+821,Corn,7,389,Panema
+822,Grain,30,338,Guatemala
+823,Cocoa,12,90,Ivory Coast
+824,Cocoa,19,327,Ivory Coast
+825,Wheat,18,325,Ghana
+826,Wheat,7,432,Ghana
+827,Corn,29,268,Panema
+828,Corn,10,427,Panema
+829,Corn,23,12,Panema
+830,Cocoa,29,226,Ivory Coast
+831,Cocoa,8,17,Ivory Coast
+832,Corn,9,200,Panema
+833,Grain,26,364,Guatemala
+834,Corn,17,496,Panema
+835,Cocoa,14,469,Ivory Coast
+836,Grain,18,233,Guatemala
+837,Wheat,14,412,Ghana
+838,Corn,29,43,Panema
+839,Corn,25,395,Panema
+840,Corn,12,390,Panema
+841,Wheat,23,465,Ghana
+842,Grain,22,365,Guatemala
+843,Corn,25,425,Panema
+844,Grain,10,462,Guatemala
+845,Cocoa,18,139,Ivory Coast
+846,Grain,17,168,Guatemala
+847,Corn,18,33,Panema
+848,Corn,7,42,Panema
+849,Cocoa,22,367,Ivory Coast
+850,Corn,11,449,Panema
+851,Wheat,7,80,Ghana
+852,Grain,19,19,Guatemala
+853,Wheat,23,317,Ghana
+854,Grain,25,488,Guatemala
+855,Corn,7,460,Panema
+856,Grain,21,13,Guatemala
+857,Cocoa,26,96,Ivory Coast
+858,Cocoa,10,212,Ivory Coast
+859,Cocoa,15,409,Ivory Coast
+860,Wheat,18,214,Ghana
+861,Cocoa,29,489,Ivory Coast
+862,Corn,29,278,Panema
+863,Grain,6,260,Guatemala
+864,Grain,6,295,Guatemala
+865,Cocoa,25,68,Ivory Coast
+866,Corn,7,92,Panema
+867,Corn,5,488,Panema
+868,Grain,20,329,Guatemala
+869,Corn,21,121,Panema
+870,Wheat,10,356,Ghana
+871,Cocoa,5,274,Ivory Coast
+872,Grain,29,238,Guatemala
+873,Corn,5,388,Panema
+874,Wheat,28,492,Ghana
+875,Corn,30,47,Panema
+876,Cocoa,9,389,Ivory Coast
+877,Wheat,7,352,Ghana
+878,Grain,12,14,Guatemala
+879,Cocoa,10,224,Ivory Coast
+880,Corn,17,432,Panema
+881,Wheat,8,116,Ghana
+882,Corn,13,422,Panema
+883,Corn,6,343,Panema
+884,Grain,22,181,Guatemala
+885,Cocoa,25,107,Ivory Coast
+886,Corn,15,497,Panema
+887,Wheat,17,456,Ghana
+888,Cocoa,27,307,Ivory Coast
+889,Wheat,17,494,Ghana
+890,Grain,14,381,Guatemala
+891,Wheat,9,270,Ghana
+892,Wheat,27,438,Ghana
+893,Grain,24,99,Guatemala
+894,Grain,28,320,Guatemala
+895,Grain,6,75,Guatemala
+896,Corn,15,299,Panema
+897,Cocoa,18,72,Ivory Coast
+898,Wheat,18,174,Ghana
+899,Grain,11,468,Guatemala
+900,Corn,14,305,Panema
+901,Grain,5,132,Guatemala
+902,Grain,10,183,Guatemala
+903,Corn,15,222,Panema
+904,Wheat,26,427,Ghana
+905,Wheat,29,152,Ghana
+906,Cocoa,17,335,Ivory Coast
+907,Cocoa,30,289,Ivory Coast
+908,Grain,26,283,Guatemala
+909,Cocoa,27,456,Ivory Coast
+910,Corn,13,166,Panema
+911,Wheat,9,418,Ghana
+912,Grain,11,260,Guatemala
+913,Wheat,22,213,Ghana
+914,Cocoa,12,56,Ivory Coast
+915,Corn,10,286,Panema
+916,Grain,5,209,Guatemala
+917,Wheat,25,102,Ghana
+918,Corn,25,91,Panema
+919,Grain,27,181,Guatemala
+920,Cocoa,21,350,Ivory Coast
+921,Corn,7,171,Panema
+922,Grain,17,158,Guatemala
+923,Grain,19,350,Guatemala
+924,Grain,12,333,Guatemala
+925,Wheat,14,349,Ghana
+926,Grain,27,137,Guatemala
+927,Wheat,19,492,Ghana
+928,Cocoa,23,92,Ivory Coast
+929,Corn,23,359,Panema
+930,Grain,17,99,Guatemala
+931,Cocoa,7,224,Ivory Coast
+932,Grain,8,160,Guatemala
+933,Grain,22,283,Guatemala
+934,Grain,21,32,Guatemala
+935,Wheat,17,332,Ghana
+936,Grain,25,335,Guatemala
+937,Corn,26,434,Panema
+938,Grain,26,472,Guatemala
+939,Corn,20,349,Panema
+940,Grain,27,369,Guatemala
+941,Corn,21,98,Panema
+942,Cocoa,28,491,Ivory Coast
+943,Cocoa,7,305,Ivory Coast
+944,Wheat,21,92,Ghana
+945,Wheat,24,210,Ghana
+946,Corn,16,319,Panema
+947,Grain,22,444,Guatemala
+948,Wheat,6,38,Ghana
+949,Grain,15,126,Guatemala
+950,Corn,15,277,Panema
+951,Corn,16,354,Panema
+952,Grain,12,51,Guatemala
+953,Grain,19,30,Guatemala
+954,Wheat,25,141,Ghana
+955,Corn,18,172,Panema
+956,Wheat,27,247,Ghana
+957,Wheat,14,47,Ghana
+958,Cocoa,6,306,Ivory Coast
+959,Wheat,22,251,Ghana
+960,Corn,8,71,Panema
+961,Cocoa,13,373,Ivory Coast
+962,Cocoa,16,238,Ivory Coast
+963,Corn,18,450,Panema
+964,Cocoa,9,405,Ivory Coast
+965,Cocoa,10,352,Ivory Coast
+966,Corn,21,298,Panema
+967,Grain,23,407,Guatemala
+968,Grain,25,352,Guatemala
+969,Cocoa,6,406,Ivory Coast
+970,Corn,14,175,Panema
+971,Grain,9,235,Guatemala
+972,Grain,9,179,Guatemala
+973,Cocoa,22,236,Ivory Coast
+974,Cocoa,12,172,Ivory Coast
+975,Cocoa,24,257,Ivory Coast
+976,Wheat,10,20,Ghana
+977,Corn,16,139,Panema
+978,Corn,12,73,Panema
+979,Wheat,11,374,Ghana
+980,Grain,5,339,Guatemala
+981,Corn,25,142,Panema
+982,Grain,8,57,Guatemala
+983,Cocoa,22,184,Ivory Coast
+984,Grain,29,207,Guatemala
+985,Grain,30,337,Guatemala
+986,Cocoa,20,393,Ivory Coast
+987,Grain,15,320,Guatemala
+988,Grain,19,391,Guatemala
+989,Grain,6,99,Guatemala
+990,Cocoa,25,462,Ivory Coast
+991,Grain,16,371,Guatemala
+992,Corn,15,434,Panema
+993,Wheat,24,447,Ghana
+994,Corn,8,230,Panema
+995,Wheat,26,234,Ghana
+996,Wheat,21,494,Ghana
+997,Corn,9,467,Panema
+998,Corn,16,229,Panema
+999,Wheat,29,419,Ghana
