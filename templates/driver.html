@@ -3,122 +3,192 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Driver View</title>
+  <title>Route Selection</title>
+  <!-- Stylesheets -->
   <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
-  <!-- <link rel="stylesheet" href="../css/styles.css"/> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/fresh-bootstrap-table.css') }}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Fonts and icons -->
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-white bg-white">
-  <div class="container px-5">
-    <a class="navbar-brand" href="#!">Go Farm!</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
-        class="navbar-toggler-icon"></span></button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home">Home</a>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="./">Vendor</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Driver</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <body>
-  <h1>
-    Would you like to schedule a ride?
-  </h1>
-  <p>
-    Sort By:
-  </p>
+
+  <nav class="navmel navmel-expand-lg navmel-white bg-white">
+    <div class="container px-5" style="font-size: large; justify-content: space-between; padding-top: .5rem;">
+      <a class="navmel-brand" style="font-size: x-large;" href="./home">Go Farm!</a>
+      <button class="navmel-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmelSupportedContent"
+        aria-controls="navmelSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navmel-toggler-icon"></span></button>
+      <div class="collapse navmel-collapse" id="navmelSupportedContent">
+        <ul class="navmel-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./">Vendor</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Driver</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
   <main>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            Destination
-          </th>
-          <th>
-            Round Trip time
-          </th>
-          <th>
-            Amount Paid
-          </th>
-          <th>
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-title='Destination'>
-            [-106.66894, 35.11379]
-          </td>
-          <td data-title='Round Trip time'>
-            40 minutes
-          </td>
-          <td data-title='Amount Paid'>
-            $30
-          </td>
-          <td class='select'>
-            <a class='button' href='MapRoute.html'>
-              Select
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td data-title='Destination'>
-            [-106.66494, 34.11379]
-          </td>
-          <td data-title='Round Trip time'>
-            30 min
-          </td>
-          <td data-title='Amount Paid'>
-            $25
-          </td>
-          <td class='select'>
-            <a class='button' href='MapRoute.html'>
-              Select
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td data-title='Destination'>
-            [-103.66894, 32.11379]
-          </td>
-          <td data-title='Round Trip time'>
-            27 min
-          </td>
-          <td data-title='Amount Paid'>
-            $23
-          </td>
-          <td class='select'>
-            <a class='button' href='MapRoute.html'>
-              Select
-            </a>
-          </td>
-        </tr>
-        <tr>
-          <td data-title='Destination'>
-            [-105.66894, 37.11479]
-          </td>
-          <td data-title='Round Trip time'>
-            34 minutes
-          </td>
-          <td data-title='Amount Paid'>
-            $32
-          </td>
-          <td class='select'>
-            <a class='button' href='MapRoute.html'>
-              Select
-            </a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="container">
+      <h2>Posted Routes From This Week</h2>
+      <div class="fresh-table toolbar-color-azure">
+        <table id="routeTable" data-url="{{ url_for('static', filename='routes.json') }}" class="table">
+          <thead>
+            <tr>
+              <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
+              <th data-field="destination" data-filter-control="select">Destination</th>
+              <th data-field="time" data-filter-control="input" data-sortable="true">Round-Trip Time (minutes)</th>
+              <th data-field="price" data-filter-control="input" data-sortable="true">Price ($)</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <!-- <table>
+        <thead>
+          <tr>
+            <th>
+              Destination
+            </th>
+            <th>
+              Round Trip time
+            </th>
+            <th>
+              Amount Paid
+            </th>
+            <th>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-title='Destination'>
+              [-106.66894, 35.11379]
+            </td>
+            <td data-title='Round Trip time'>
+              40 minutes
+            </td>
+            <td data-title='Amount Paid'>
+              $30
+            </td>
+            <td class='select'>
+              <a class='button' href='MapRoute.html'>
+                Select
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td data-title='Destination'>
+              [-106.66494, 34.11379]
+            </td>
+            <td data-title='Round Trip time'>
+              30 min
+            </td>
+            <td data-title='Amount Paid'>
+              $25
+            </td>
+            <td class='select'>
+              <a class='button' href='MapRoute.html'>
+                Select
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td data-title='Destination'>
+              [-103.66894, 32.11379]
+            </td>
+            <td data-title='Round Trip time'>
+              27 min
+            </td>
+            <td data-title='Amount Paid'>
+              $23
+            </td>
+            <td class='select'>
+              <a class='button' href='MapRoute.html'>
+                Select
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td data-title='Destination'>
+              [-105.66894, 37.11479]
+            </td>
+            <td data-title='Round Trip time'>
+              34 minutes
+            </td>
+            <td data-title='Amount Paid'>
+              $32
+            </td>
+            <td class='select'>
+              <a class='button' href='MapRoute.html'>
+                Select
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table> -->
     </div>
   </main>
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js"></script>
+  <script
+    src="https://unpkg.com/bootstrap-table@1.20.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+
+  <script type="text/javascript">
+
+    $(function () {
+      $('#routeTable').bootstrapTable({
+        classes: 'table table-hover table-bordered table-striped',
+        // toolbar: '.toolbar',
+
+        search: true,
+        searchAlign: 'left',
+        showRefresh: true,
+        showToggle: true,
+        showColumns: true,
+        buttonsClass: 'light',
+        pagination: true,
+        striped: true,
+        sortable: true,
+        pageSize: 10,
+        pageList: [10, 12, 25, 50, 100],
+
+        formatShowingRows: function (pageFrom, pageTo, totalRows) {
+          return ''
+        },
+        formatRecordsPerPage: function (pageNumber) {
+          return pageNumber + ' rows visible'
+        }
+      })
+    })
+
+    // $('#orderTable').on('refresh.bs.table', function () {
+    //   fetch_orders();
+    // })
+
+    function fetch_orders() {
+      $.ajax({
+        type: "POST",
+        url: "/fetch_orders"
+      }).done(function (data) {
+        var json = JSON.parse(data);
+        console.log(json.rows);
+      });
+    }
+
+
+  </script>
 
   <!-- partial:index.partial.html -->
 
