@@ -16,20 +16,26 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- >>>>>>> main -->
+
+  <style>
+    .titles {
+      float: left;
+      padding-left: 1em;
+      clear: both;
+    }
+  </style>
 </head>
-<html>
 
 <body>
-  <nav class="navmel navmel-expand-lg navmel-white bg-white">
-    <div class="container px-5" style="font-size: large; justify-content: space-between; padding-top: .5rem;">
-      <a class="navmel-brand" style="font-size: x-large;" href="./home">Go Farm!</a>
+  <nav class="navmel navmel-expand-lg navmel-dark bg-secondary">
+    <div class="container px-5" style="font-size: large; justify-content: space-between; padding: .5rem;">
+      <a class="navmel-brand" style="font-size: x-large;" href="./home">GoFarm!</a>
       <button class="navmel-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmelSupportedContent"
         aria-controls="navmelSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navmel-toggler-icon"></span></button>
       <div class="collapse navmel-collapse" id="navmelSupportedContent">
         <ul class="navmel-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home">Home</a>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="./home">Home</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="#">Vendor</a></li>
           <li class="nav-item"><a class="nav-link" href="./driver">Driver</a></li>
@@ -37,18 +43,14 @@
       </div>
     </div>
   </nav>
+
   <main>
+    <br>
     <div class="container">
-      <h2>Posted Orders This Week</h2>
-      <!-- <div class="float-end">
-        <button type="button" class="btn btn-sm btn-secondary" onclick="purchase_order(this)">ring ring
-          woman</button><br><br>
-      </div> -->
-      <!-- <table class="table-striped" data-header-style="headerStyle" data-toggle="orderTable" id="orderTable"
-        data-search="true" data-search-align="left" data-url="{{ url_for('static', filename='dataDOWNLOAD.json') }}"
-        data-height="700" data-buttons-class="primary" data-auto-refresh="true" data-filter-control="true"
-        data-show-columns="true" data-show-refresh="true" data-virtual-scroll="true"> -->
       <div class="fresh-table toolbar-color-azure">
+        <div class="titles">
+          <h2 class="text-light">Posted Orders</h2>
+        </div>
         <table id="orderTable" data-url="{{ url_for('static', filename='dataDOWNLOAD.json') }}" class="table">
           <thead>
             <tr>
@@ -105,7 +107,7 @@
         pagination: true,
         striped: true,
         sortable: true,
-        pageSize: 10,
+        pageSize: 11,
         pageList: [10, 12, 25, 50, 100],
 
         formatShowingRows: function (pageFrom, pageTo, totalRows) {

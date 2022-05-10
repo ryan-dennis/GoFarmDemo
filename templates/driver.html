@@ -17,19 +17,26 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+  <style>
+    .titles {
+      float: left;
+      padding-left: 1em;
+      clear: both;
+    }
+  </style>
+
 </head>
 
 <body>
-
-  <nav class="navmel navmel-expand-lg navmel-white bg-white">
-    <div class="container px-5" style="font-size: large; justify-content: space-between; padding-top: .5rem;">
-      <a class="navmel-brand" style="font-size: x-large;" href="./home">Go Farm!</a>
+  <nav class="navmel navmel-expand-lg navmel-dark bg-secondary">
+    <div class="container px-5" style="font-size: large; justify-content: space-between; padding: .5rem;">
+      <a class="navmel-brand" style="font-size: x-large;" href="./home">GoFarm!</a>
       <button class="navmel-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmelSupportedContent"
         aria-controls="navmelSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
           class="navmel-toggler-icon"></span></button>
       <div class="collapse navmel-collapse" id="navmelSupportedContent">
         <ul class="navmel-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home">Home</a>
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="./home">Home</a>
           </li>
           <li class="nav-item"><a class="nav-link" href="./">Vendor</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Driver</a></li>
@@ -37,104 +44,27 @@
       </div>
     </div>
   </nav>
+
   <main>
+    <br>
     <div class="container">
-      <h2>Posted Routes From This Week</h2>
-      <div class="fresh-table toolbar-color-azure">
+      <div class="fresh-table toolbar-color-blue">
+        <div class="titles">
+          <h2 class="text-light">Posted Routes</h2>
+        </div>
         <table id="routeTable" data-url="{{ url_for('static', filename='routes.json') }}" class="table">
           <thead>
             <tr>
               <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
-              <th data-field="destination" data-filter-control="select">Destination</th>
+              <th data-field="destination" data-sortable="true">Destination</th>
               <th data-field="time" data-filter-control="input" data-sortable="true">Round-Trip Time (minutes)</th>
               <th data-field="price" data-filter-control="input" data-sortable="true">Price ($)</th>
+              <th data-field="action" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">
+                Action</th>
             </tr>
           </thead>
         </table>
       </div>
-      <!-- <table>
-        <thead>
-          <tr>
-            <th>
-              Destination
-            </th>
-            <th>
-              Round Trip time
-            </th>
-            <th>
-              Amount Paid
-            </th>
-            <th>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-title='Destination'>
-              [-106.66894, 35.11379]
-            </td>
-            <td data-title='Round Trip time'>
-              40 minutes
-            </td>
-            <td data-title='Amount Paid'>
-              $30
-            </td>
-            <td class='select'>
-              <a class='button' href='MapRoute.html'>
-                Select
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td data-title='Destination'>
-              [-106.66494, 34.11379]
-            </td>
-            <td data-title='Round Trip time'>
-              30 min
-            </td>
-            <td data-title='Amount Paid'>
-              $25
-            </td>
-            <td class='select'>
-              <a class='button' href='MapRoute.html'>
-                Select
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td data-title='Destination'>
-              [-103.66894, 32.11379]
-            </td>
-            <td data-title='Round Trip time'>
-              27 min
-            </td>
-            <td data-title='Amount Paid'>
-              $23
-            </td>
-            <td class='select'>
-              <a class='button' href='MapRoute.html'>
-                Select
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td data-title='Destination'>
-              [-105.66894, 37.11479]
-            </td>
-            <td data-title='Round Trip time'>
-              34 minutes
-            </td>
-            <td data-title='Amount Paid'>
-              $32
-            </td>
-            <td class='select'>
-              <a class='button' href='MapRoute.html'>
-                Select
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table> -->
     </div>
   </main>
 
@@ -146,6 +76,18 @@
     src="https://unpkg.com/bootstrap-table@1.20.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
 
   <script type="text/javascript">
+    window.operateEvents = {
+      'click .purchase': function (e, value, row, index) {
+        purchase_order(row['id']);
+      }
+    }
+
+    function operateFormatter(value, row, index) {
+      return [
+        '<a rel="tooltip" title="Order" class="table-action purchase" href="javascript:void(0)" title="Order">',
+        '<i class="fa-solid fa-cart-shopping"></i>'
+      ].join('')
+    }
 
     $(function () {
       $('#routeTable').bootstrapTable({
@@ -161,7 +103,7 @@
         pagination: true,
         striped: true,
         sortable: true,
-        pageSize: 10,
+        pageSize: 11,
         pageList: [10, 12, 25, 50, 100],
 
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
@@ -177,10 +119,10 @@
     //   fetch_orders();
     // })
 
-    function fetch_orders() {
+    function fetch_routes() {
       $.ajax({
         type: "POST",
-        url: "/fetch_orders"
+        url: "/fetch_routes"
       }).done(function (data) {
         var json = JSON.parse(data);
         console.log(json.rows);

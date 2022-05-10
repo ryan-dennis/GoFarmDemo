@@ -1,0 +1,162 @@
+{
+    "total": 800,
+    "totalNotFiltered": 800,
+    "rows": [
+        {
+            "id": 0,
+            "destination": "Ghana",
+            "time": "38",
+            "price": "40"
+        },
+        {
+            "id": 1,
+            "destination": "India",
+            "time": "105",
+            "price": "120"
+        },
+        {
+            "id": 2,
+            "destination": "India",
+            "time": "90",
+            "price": "20"
+        },
+        {
+            "id": 3,
+            "destination": "India",
+            "time": "210",
+            "price": "35"
+        },
+        {
+            "id": 4,
+            "destination": "Ghana",
+            "time": "65",
+            "price": "40"
+        },
+        {
+            "id": 5,
+            "destination": "Ghana",
+            "time": "340",
+            "price": "55"
+        },
+        {
+            "id": 6,
+            "destination": "Ghana",
+            "time": "50",
+            "price": "60"
+        },
+        {
+            "id": 7,
+            "destination": "Ghana",
+            "time": "145",
+            "price": "75"
+        },
+        {
+            "id": 8,
+            "destination": "Ghana",
+            "time": "93",
+            "price": "80"
+        },
+        {
+            "id": 9,
+            "destination": "Ghana",
+            "time": "438",
+            "price": "90"
+        },
+        {
+            "id": 10,
+            "destination": "Argentina",
+            "time": "174",
+            "price": "10"
+        },
+        {
+            "id": 11,
+            "destination": "Argentina",
+            "time": "81",
+            "price": "110"
+        },
+        {
+            "id": 12,
+            "destination": "Ghana",
+            "time": "10",
+            "price": "10"
+        },
+        {
+            "id": 13,
+            "destination": "Ghana",
+            "time": "70",
+            "price": "15"
+        },
+        {
+            "id": 14,
+            "destination": "Ghana",
+            "time": "101",
+            "price": "65"
+        },
+        {
+            "id": 15,
+            "destination": "Ghana",
+            "time": "93",
+            "price": "150"
+        },
+        {
+            "id": 16,
+            "destination": "Grain",
+            "time": "74",
+            "price": "60"
+        },
+        {
+            "id": 17,
+            "destination": "Ghana",
+            "time": "432",
+            "price": "170"
+        },
+        {
+            "id": 18,
+            "destination": "Ghana",
+            "time": "118",
+            "price": "90"
+        },
+        {
+            "id": 19,
+            "destination": "Ghana",
+            "time": "20",
+            "price": "59"
+        },
+        {
+            "id": 20,
+            "destination": "Grain",
+            "time": "27",
+            "price": "5"
+        },
+        {
+            "id": 21,
+            "destination": "Ghana",
+            "time": "68",
+            "price": "21"
+        },
+        {
+            "id": 22,
+            "destination": "Ghana",
+            "time": "15",
+            "price": "35"
+        },
+        {
+            "id": 23,
+            "destination": "Ghana",
+            "time": "304",
+            "price": "40"
+        },
+        {
+            "id": 24,
+            "destination": "Ghana",
+            "time": "100",
+            "price": "26"
+        },
+        {
+            "id": 25,
+            "destination": "Ghana",
+            "time": "50",
+            "price": "50"
+        }
+    ]
+}
