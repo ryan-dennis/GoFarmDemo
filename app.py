@@ -23,6 +23,11 @@ def home():
     return render_template('home.html')
 
 
+@app.route('/driver')
+def driver():
+    return render_template('driver.html')
+
+
 @app.route('/fetch_orders', methods=['POST'])
 def fetch_orders():
     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')

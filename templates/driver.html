@@ -1,121 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Responsive Table + Detail View</title>
-  <link rel="stylesheet" href="../css/style.css"/>
+  <title>Driver View</title>
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
   <!-- <link rel="stylesheet" href="../css/styles.css"/> -->
 
 </head>
 <nav class="navbar navbar-expand-lg navbar-white bg-white">
-    <div class="container px-5">
-        <a class="navbar-brand" href="#!">Go Farm!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Vendor</a></li>
-                <li class="nav-item"><a class="nav-link" href="driver.html">Driver</a></li>
-            </ul>
-        </div>
+  <div class="container px-5">
+    <a class="navbar-brand" href="#!">Go Farm!</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+        class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="./home">Home</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="./">Vendor</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Driver</a></li>
+      </ul>
     </div>
+  </div>
 </nav>
-<body>
-        <h1>
-            Would you like to schedule a ride?
-        </h1>
-        <p>
-            Sort By:
-        </p>
-          <main>
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    Destination
-                  </th>
-                  <th>
-                    Round Trip time
-                  </th>
-                  <th>
-                    Amount Paid
-                  </th>
-                  <th>
-                </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-title='Destination'>
-                    [-106.66894, 35.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    40 minutes
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $30
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-106.66494, 34.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    30 min
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $25
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-103.66894, 32.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    27 min
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $23
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-105.66894, 37.11479]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    34 minutes
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $32
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            </div>
-          </main>
 
-<!-- partial:index.partial.html -->
+<body>
+  <h1>
+    Would you like to schedule a ride?
+  </h1>
+  <p>
+    Sort By:
+  </p>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Destination
+          </th>
+          <th>
+            Round Trip time
+          </th>
+          <th>
+            Amount Paid
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-title='Destination'>
+            [-106.66894, 35.11379]
+          </td>
+          <td data-title='Round Trip time'>
+            40 minutes
+          </td>
+          <td data-title='Amount Paid'>
+            $30
+          </td>
+          <td class='select'>
+            <a class='button' href='MapRoute.html'>
+              Select
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td data-title='Destination'>
+            [-106.66494, 34.11379]
+          </td>
+          <td data-title='Round Trip time'>
+            30 min
+          </td>
+          <td data-title='Amount Paid'>
+            $25
+          </td>
+          <td class='select'>
+            <a class='button' href='MapRoute.html'>
+              Select
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td data-title='Destination'>
+            [-103.66894, 32.11379]
+          </td>
+          <td data-title='Round Trip time'>
+            27 min
+          </td>
+          <td data-title='Amount Paid'>
+            $23
+          </td>
+          <td class='select'>
+            <a class='button' href='MapRoute.html'>
+              Select
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td data-title='Destination'>
+            [-105.66894, 37.11479]
+          </td>
+          <td data-title='Round Trip time'>
+            34 minutes
+          </td>
+          <td data-title='Amount Paid'>
+            $32
+          </td>
+          <td class='select'>
+            <a class='button' href='MapRoute.html'>
+              Select
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </main>
+
+  <!-- partial:index.partial.html -->
 
 </body>
+
 </html>
