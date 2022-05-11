@@ -5,158 +5,262 @@
         {
             "id": 0,
             "destination": "Ghana",
-            "time": "38",
-            "price": "40"
+            "time": 613,
+            "price": "40",
+            "coords": [
+                -107.66494,
+                34.11379
+            ]
         },
         {
             "id": 1,
             "destination": "India",
-            "time": "105",
-            "price": "120"
+            "time": 555,
+            "price": "120",
+            "coords": [
+                -110.66494,
+                34.11379
+            ]
         },
         {
             "id": 2,
             "destination": "India",
-            "time": "90",
-            "price": "20"
+            "time": 598,
+            "price": "20",
+            "coords": [
+                -108.66494,
+                34.11379
+            ]
         },
         {
             "id": 3,
             "destination": "India",
-            "time": "210",
-            "price": "35"
+            "time": 556,
+            "price": "35",
+            "coords": [
+                -109.66494,
+                34.11379
+            ]
         },
         {
             "id": 4,
             "destination": "Ghana",
-            "time": "65",
-            "price": "40"
+            "time": 748,
+            "price": "40",
+            "coords": [
+                -106.66494,
+                33.11379
+            ]
         },
         {
             "id": 5,
             "destination": "Ghana",
-            "time": "340",
-            "price": "55"
+            "time": 675,
+            "price": "55",
+            "coords": [
+                -106.66494,
+                35.11379
+            ]
         },
         {
             "id": 6,
             "destination": "Ghana",
-            "time": "50",
-            "price": "60"
+            "time": 723,
+            "price": "60",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 7,
             "destination": "Ghana",
-            "time": "145",
-            "price": "75"
+            "time": 723,
+            "price": "75",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 8,
             "destination": "Ghana",
-            "time": "93",
-            "price": "80"
+            "time": 723,
+            "price": "80",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 9,
             "destination": "Ghana",
-            "time": "438",
-            "price": "90"
+            "time": 723,
+            "price": "90",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 10,
             "destination": "Argentina",
-            "time": "174",
-            "price": "10"
+            "time": 723,
+            "price": "10",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 11,
             "destination": "Argentina",
-            "time": "81",
-            "price": "110"
+            "time": 723,
+            "price": "110",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 12,
             "destination": "Ghana",
-            "time": "10",
-            "price": "10"
+            "time": 723,
+            "price": "10",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 13,
             "destination": "Ghana",
-            "time": "70",
-            "price": "15"
+            "time": 723,
+            "price": "15",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 14,
             "destination": "Ghana",
-            "time": "101",
-            "price": "65"
+            "time": 723,
+            "price": "65",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 15,
             "destination": "Ghana",
-            "time": "93",
-            "price": "150"
+            "time": 723,
+            "price": "150",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 16,
             "destination": "Grain",
-            "time": "74",
-            "price": "60"
+            "time": 723,
+            "price": "60",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 17,
             "destination": "Ghana",
-            "time": "432",
-            "price": "170"
+            "time": 723,
+            "price": "170",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 18,
             "destination": "Ghana",
-            "time": "118",
-            "price": "90"
+            "time": 723,
+            "price": "90",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 19,
             "destination": "Ghana",
-            "time": "20",
-            "price": "59"
+            "time": 723,
+            "price": "59",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 20,
             "destination": "Grain",
-            "time": "27",
-            "price": "5"
+            "time": 723,
+            "price": "5",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 21,
             "destination": "Ghana",
-            "time": "68",
-            "price": "21"
+            "time": 723,
+            "price": "21",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 22,
             "destination": "Ghana",
-            "time": "15",
-            "price": "35"
+            "time": 723,
+            "price": "35",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 23,
             "destination": "Ghana",
-            "time": "304",
-            "price": "40"
+            "time": 723,
+            "price": "40",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 24,
             "destination": "Ghana",
-            "time": "100",
-            "price": "26"
+            "time": 723,
+            "price": "26",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         },
         {
             "id": 25,
             "destination": "Ghana",
-            "time": "50",
-            "price": "50"
+            "time": 723,
+            "price": "50",
+            "coords": [
+                -106.66494,
+                34.11379
+            ]
         }
     ]
 }

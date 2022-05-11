@@ -2,13 +2,15 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+blob-quickstart-v12
 # C extensions
 *.so
 
 # Distribution / packaging
 .Python
 build/
+*.DS_Store
+.vscode
 develop-eggs/
 dist/
 downloads/

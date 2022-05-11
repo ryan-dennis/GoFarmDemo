@@ -5,27 +5,14 @@ from twilio.twiml.messaging_response import MessagingResponse
 import json
 import os
 import urllib.request
+import requests
 import ssl
 from azure.storage.blob import BlobServiceClient, BlobClient, ContainerClient
 app = Flask(__name__)
 
 post_message = ''
 orders = {}
-
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-
-@app.route('/home')
-def home():
-    return render_template('home.html')
-
-
-@app.route('/driver')
-def driver():
-    return render_template('driver.html')
+routes = {}
 
 
 @app.route('/fetch_orders', methods=['POST'])
@@ -38,26 +25,12 @@ def fetch_orders():
     # Create the container
     container_client = blob_service_client.get_container_client('user-info')
 
-    # Create new Container
-    # container_client.create_container()
-
-    # print("\nListing blobs...")
-
-    # List the blobs in the container
-    # blob_list = container_client.list_blobs()
-    # for blob in blob_list:
-    #     print("\t" + blob.name)
-
     blob_client = blob_service_client.get_blob_client(
         container='user-info', blob='data.json')
 
-    # Download the blob to a local file
-    # Add 'DOWNLOAD' before the .txt extension so you can see both files in the data directory
     download_file_path = os.path.join('./static', str.replace(
         'data.json', '.json', 'DOWNLOAD.json'))
-    # print("\nDownloading blob to \n\t" + download_file_path)
 
-    # store in mem? on init? update on text msg, and then write to blob?
     global orders
     res = blob_client.download_blob().readall()
     with open(download_file_path, 'wb') as download_file:
@@ -66,7 +39,8 @@ def fetch_orders():
     return json.dumps(orders)
 
 
-def upload_orders():
+@app.route('/fetch_routes', methods=['POST'])
+def fetch_routes():
     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 
     # Create the BlobServiceClient object
@@ -76,14 +50,75 @@ def upload_orders():
     container_client = blob_service_client.get_container_client('user-info')
 
     blob_client = blob_service_client.get_blob_client(
-        container='user-info', blob='data.json')
+        container='user-info', blob='routes.json')
+
+    download_file_path = os.path.join('./static', 'routes.json')
+
+    global routes
+    res = blob_client.download_blob().readall()
+    with open(download_file_path, 'wb') as download_file:
+        download_file.write(res)
+    routes = json.loads(res)
+    return json.dumps(routes)
+
+
+@ app.route('/')
+def index():
+    fetch_orders()
+    return render_template('index.html')
+
+
+@ app.route('/home')
+def home():
+    return render_template('home.html')
+
+
+@ app.route('/driver')
+def driver():
+    fetch_routes()
+    return render_template('driver.html')
+
+
+def upload_orders(file='dataDOWNLOAD'):
+    connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+
+    # Create the BlobServiceClient object
+    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+
+    # Create the container
+    container_client = blob_service_client.get_container_client('user-info')
+
+    b = 'routes' if file == 'routes' else 'data'
+    blob_client = blob_service_client.get_blob_client(
+        container='user-info', blob=f'{b}.json')
 
     # Download the blob to a local file
     # Add 'DOWNLOAD' before the .txt extension so you can see both files in the data directory
-    download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
+    download_file_path = os.path.join('./static', f'{file}.json')
 
     with open(download_file_path, "rb") as data:
         blob_client.upload_blob(data, overwrite=True)
+
+
+def init_routes():
+    global routes
+    fetch_routes()
+    start = [-117.251829, 32.954890]  # TODO dynamic?
+    key = "uKaIQorGSXWUpjBLXiN8buhKZ2wcUKnZ8hcQuLHD5OM"
+    for i in range(len(routes['rows'])):
+        route = routes['rows'][i]
+        lat = route['coords'][0]
+        lon = route['coords'][1]
+        response = requests.get(
+            f'https://atlas.microsoft.com/route/directions/json?subscription-key={key}&api-version=1.0&query={start[1]},{start[0]}:{lon},{lat}&travelMode=car&traffic=true&computeTravelTimeFor=all')
+        timeMins = response.json(
+        )['routes'][0]['summary']['travelTimeInSeconds']/60
+        routes['rows'][i]['time'] = round(timeMins)
+    download_file_path = os.path.join('./static', 'routes.json')
+    with open(download_file_path, 'w') as download_file:
+        download_file.write(json.dumps(routes, indent=4))
+    upload_orders('routes')
+    return json.dumps({})
 
 
 @ app.route('/purchase_order/<num>', methods=['POST'])
@@ -99,7 +134,6 @@ def purchase_order(num):
 
     global orders
     fetch_orders()
-    print(num)
     # order_id = request.args.get('id')
     orders['rows'][int(num)]['status'] = 'Purchased'
     download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
@@ -256,3 +290,4 @@ def allowSelfSignedHttps(allowed):
 if __name__ == '__main__':
     app.run()
     fetch_orders()
+    fetch_routes()
