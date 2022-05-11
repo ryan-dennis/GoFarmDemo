@@ -73,7 +73,7 @@
               <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
               <th data-field="destination" data-sortable="true">Destination</th>
               <th data-field="time" data-filter-control="input" data-sortable="true">Round-Trip Time (minutes)</th>
-              <th data-field="price" data-filter-control="input" data-sortable="true">Price ($)</th>
+              <th data-field="price" data-filter-control="input" data-sortable="true">Payment ($)</th>
               <th data-field="action" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">
                 Action</th>
             </tr>
@@ -105,7 +105,7 @@
     function operateFormatter(value, row, index) {
       return [
         '<a rel="tooltip" title="Order" class="table-action purchase" href="javascript:void(0)" title="Order">',
-        '<i class="fa-solid fa-lg fa-map-location-dot"></i>'
+        '<i class="fa-solid fa-lg fa-car"></i>'
       ].join('')
     }
 
