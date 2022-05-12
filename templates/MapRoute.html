@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Map Route</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Add references to the Azure Maps Map control JavaScript and CSS files. -->
+    <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css">
+    <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+
+    <!-- Add a reference to the Azure Maps Services Module JavaScript file. -->
+    <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/style.css" rel="stylesheet" />
+
+    <script>
+        var map, datasource, client;
+
+        function time(number) {
+            var hours = Math.floor(number / 3600);
+            var seconds = Math.ceil((number - (hours * 3600)) / 60);
+            return hours + " hr " + seconds + " min"
+        }
+
+        function GetMap(startLong, startLat, endLong, endLat) {
+            //onload="GetMap(-117.251829, 32.954890, -106.66894, 35.11379)"
+            //Add Map Control JavaScript code here.
+            //Instantiate a map object
+            var map = new atlas.Map('myMap', {
+                // Replace <Your Azure Maps Key> with your Azure Maps primary subscription key. https://aka.ms/am-primaryKey
+                authOptions: {
+                    authType: 'subscriptionKey',
+                    subscriptionKey: 'uKaIQorGSXWUpjBLXiN8buhKZ2wcUKnZ8hcQuLHD5OM'
+                }
+            });
+            //Wait until the map resources are ready.
+            map.events.add('ready', function () {
+
+                var popupTemplate = '<div class="customInfobox"><div class="name">{name}</div>{description}</div>';
+
+                //Create a data source and add it to the map.
+                datasource = new atlas.source.DataSource();
+                map.sources.add(datasource);
+
+                //Add a layer for rendering the route lines and have it render under the map labels.
+                map.layers.add(new atlas.layer.LineLayer(datasource, null, {
+                    strokeColor: '#2272B9',
+                    strokeWidth: 5,
+                    lineJoin: 'round',
+                    lineCap: 'round'
+                }), 'labels');
+
+                //Add a layer for rendering point data.
+                map.layers.add(new atlas.layer.SymbolLayer(datasource, null, {
+                    iconOptions: {
+                        image: ['get', 'icon'],
+                        allowOverlap: true
+                    },
+                    textOptions: {
+                        textField: ['get', 'title'],
+                        offset: [0, 1.2]
+                    },
+                    filter: ['any', ['==', ['geometry-type'], 'Point'], ['==', ['geometry-type'], 'MultiPoint']] //Only render Point or MultiPoints in this layer.
+                }));
+                //Create the GeoJSON objects which represent the start and end points of the route.
+                var startPoint = new atlas.data.Feature(new atlas.data.Point([startLong, startLat]), {
+                    title: "Stef House",
+                    icon: "pin-blue"
+                });
+
+                var endPoint = new atlas.data.Feature(new atlas.data.Point([endLong, endLat]), {
+                    title: "ABQ",
+                    icon: "pin-red"
+                });
+                //Add the data to the data source.
+                datasource.add([startPoint, endPoint]);
+
+                map.setCamera({
+                    bounds: atlas.data.BoundingBox.fromData([startPoint, endPoint]),
+                    padding: 80
+                });
+                //Use MapControlCredential to share authentication between a map control and the service module.
+                var pipeline = atlas.service.MapsURL.newPipeline(new atlas.service.MapControlCredential(map));
+
+                //Construct the RouteURL object
+                var routeURL = new atlas.service.RouteURL(pipeline);
+                //Start and end point input to the routeURL
+                var coordinates = [[startPoint.geometry.coordinates[0], startPoint.geometry.coordinates[1]], [endPoint.geometry.coordinates[0], endPoint.geometry.coordinates[1]]];
+                popup = new atlas.Popup({
+                    pixelOffset: [0, -18],
+                    closeButton: false
+                });
+                var seconds;
+                //Make a search route request
+                routeURL.calculateRouteDirections(atlas.service.Aborter.timeout(10000), coordinates).then((directions) => {
+                    //Get data features from response
+                    var data = directions.geojson.getFeatures();
+                    seconds = directions.routes[0].summary.travelTimeInSeconds;
+                    datasource.add(data);
+                    var popup = new atlas.Popup({
+                        content: '<div style="padding:10px;color:white">' + time(seconds) + '</div>',
+                        position: [endLong, endLat],
+                        fillColor: 'rgba(0,0,0,0.8)',
+                        closeButton: false
+                    });
+
+                    popup.open(map);
+                });
+            });
+        }
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        #myMap {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container px-5">
+            <a class="navbar-brand" href="#!">Go Farm!</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Vendor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="driver.html">Driver</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="wrapper">
+        <h1>
+            Would you like to schedule a ride?
+        </h1>
+        <p>
+            Sort By:
+        </p>
+        <main>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Destination
+                        </th>
+                        <th>
+                            Round Trip time
+                        </th>
+                        <th>
+                            Amount Paid
+                        </th>
+                        <th>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td data-title='Destination'>
+                            [-106.66894, 35.11379]
+                        </td>
+                        <td data-title='Round Trip time'>
+                            40 minutes
+                        </td>
+                        <td data-title='Amount Paid'>
+                            $30
+                        </td>
+                        <td class='select'>
+                            <a class='button' onclick="GetMap(-117.251829, 32.954890, -106.66494, 34.11379 ); document.getElementById('wrapper').style.visibility='hidden'; ">
+                                Select
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title='Destination'>
+                            [-106.66494, 34.11379]
+                        </td>
+                        <td data-title='Round Trip time'>
+                            30 min
+                        </td>
+                        <td data-title='Amount Paid'>
+                            $25
+                        </td>
+                        <td class='select'>
+                            <a class='button'
+                                onclick="GetMap(-117.251829, 32.954890, -106.66494, 34.11379 ); document.getElementById('wrapper').style.visibility='hidden'; ">
+                                Select
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title='Destination'>
+                            [-103.66894, 32.11379]
+                        </td>
+                        <td data-title='Round Trip time'>
+                            27 min
+                        </td>
+                        <td data-title='Amount Paid'>
+                            $23
+                        </td>
+                        <td class='select'>
+                            <a class='button' onclick="GetMap(-117.251829, 32.954890, -106.66494, 34.11379 ); document.getElementById('wrapper').style.visibility='hidden'; ">
+                                Select
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-title='Destination'>
+                            [-105.66894, 37.11479]
+                        </td>
+                        <td data-title='Round Trip time'>
+                            34 minutes
+                        </td>
+                        <td data-title='Amount Paid'>
+                            $32
+                        </td>
+                        <td class='select'>
+                            <a class='button' onclick="GetMap(-117.251829, 32.954890, -106.66494, 34.11379 ); document.getElementById('wrapper').style.visibility='hidden'; ">
+                                Select
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </div>
+    </main>
+    </div>
+    <div id="myMap"></div>
+
+</body>
+
+</html>

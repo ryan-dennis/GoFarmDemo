@@ -1,0 +1,201 @@
+Job ID,Crop Type,Price,Quantity,Location
+0,Wheat,0.47,75,Ghana
+1,Cocoa,1.97,311,Ivory Coast
+2,Wheat,0.49,312,Ghana
+3,Wheat,0.45,496,Ghana
+4,Cocoa,1.87,426,Ivory Coast
+5,Cocoa,1.92,243,Ivory Coast
+6,Cocoa,1.82,117,Ivory Coast
+7,Cocoa,1.92,101,Ivory Coast
+8,Coffee,0.34,407,Guatemala
+9,Corn,0.32,89,Panema
+10,Wheat,0.47,439,Ghana
+11,Corn,0.36,97,Panema
+12,Cocoa,1.95,85,Ivory Coast
+13,Corn,0.35,234,Panema
+14,Coffee,0.31,240,Guatemala
+15,Coffee,0.33,398,Guatemala
+16,Cocoa,1.87,150,Ivory Coast
+17,Corn,0.35,205,Panema
+18,Wheat,0.5,346,Ghana
+19,Cocoa,1.95,145,Ivory Coast
+20,Cocoa,1.85,411,Ivory Coast
+21,Wheat,0.5,322,Ghana
+22,Cocoa,1.83,105,Ivory Coast
+23,Cocoa,1.9,234,Ivory Coast
+24,Corn,0.37,404,Panema
+25,Corn,0.35,185,Panema
+26,Coffee,0.31,360,Guatemala
+27,Cocoa,1.97,499,Ivory Coast
+28,Coffee,0.34,32,Guatemala
+29,Wheat,0.45,118,Ghana
+30,Cocoa,1.9,150,Ivory Coast
+31,Corn,0.32,35,Panema
+32,Coffee,0.32,385,Guatemala
+33,Corn,0.3,358,Panema
+34,Coffee,0.38,261,Guatemala
+35,Cocoa,1.85,383,Ivory Coast
+36,Cocoa,1.91,112,Ivory Coast
+37,Coffee,0.36,357,Guatemala
+38,Cocoa,1.97,212,Ivory Coast
+39,Wheat,0.45,322,Ghana
+40,Coffee,0.29,458,Guatemala
+41,Coffee,0.29,128,Guatemala
+42,Corn,0.29,230,Panema
+43,Coffee,0.31,338,Guatemala
+44,Wheat,0.48,156,Ghana
+45,Coffee,0.35,321,Guatemala
+46,Corn,0.33,72,Panema
+47,Wheat,0.49,228,Ghana
+48,Wheat,0.41,100,Ghana
+49,Cocoa,1.91,66,Ivory Coast
+50,Corn,0.35,365,Panema
+51,Coffee,0.29,359,Guatemala
+52,Wheat,0.44,497,Ghana
+53,Wheat,0.42,404,Ghana
+54,Corn,0.35,327,Panema
+55,Wheat,0.45,363,Ghana
+56,Corn,0.32,238,Panema
+57,Corn,0.38,341,Panema
+58,Cocoa,1.81,307,Ivory Coast
+59,Cocoa,1.84,18,Ivory Coast
+60,Cocoa,1.92,128,Ivory Coast
+61,Corn,0.36,93,Panema
+62,Wheat,0.4,160,Ghana
+63,Coffee,0.3,240,Guatemala
+64,Coffee,0.37,359,Guatemala
+65,Corn,0.33,499,Panema
+66,Corn,0.33,111,Panema
+67,Wheat,0.41,106,Ghana
+68,Wheat,0.46,20,Ghana
+69,Cocoa,1.8,84,Ivory Coast
+70,Corn,0.32,463,Panema
+71,Coffee,0.35,259,Guatemala
+72,Wheat,0.42,285,Ghana
+73,Cocoa,1.97,420,Ivory Coast
+74,Corn,0.39,438,Panema
+75,Cocoa,1.85,58,Ivory Coast
+76,Wheat,0.46,420,Ghana
+77,Coffee,0.32,447,Guatemala
+78,Corn,0.34,125,Panema
+79,Cocoa,1.87,442,Ivory Coast
+80,Cocoa,1.89,374,Ivory Coast
+81,Cocoa,1.94,115,Ivory Coast
+82,Wheat,0.42,227,Ghana
+83,Corn,0.29,14,Panema
+84,Cocoa,1.95,265,Ivory Coast
+85,Corn,0.38,29,Panema
+86,Corn,0.3,361,Panema
+87,Cocoa,1.91,115,Ivory Coast
+88,Wheat,0.5,437,Ghana
+89,Corn,0.33,183,Panema
+90,Cocoa,1.82,113,Ivory Coast
+91,Wheat,0.48,441,Ghana
+92,Coffee,0.28,361,Guatemala
+93,Coffee,0.29,113,Guatemala
+94,Coffee,0.32,59,Guatemala
+95,Cocoa,1.88,306,Ivory Coast
+96,Coffee,0.31,214,Guatemala
+97,Wheat,0.4,317,Ghana
+98,Corn,0.31,177,Panema
+99,Coffee,0.29,270,Guatemala
+100,Wheat,0.43,219,Ghana
+101,Coffee,0.34,462,Guatemala
+102,Coffee,0.32,128,Guatemala
+103,Wheat,0.43,388,Ghana
+104,Corn,0.33,214,Panema
+105,Coffee,0.36,183,Guatemala
+106,Coffee,0.3,413,Guatemala
+107,Coffee,0.34,24,Guatemala
+108,Coffee,0.38,227,Guatemala
+109,Wheat,0.42,433,Ghana
+110,Wheat,0.47,295,Ghana
+111,Cocoa,1.87,251,Ivory Coast
+112,Wheat,0.47,256,Ghana
+113,Wheat,0.42,318,Ghana
+114,Wheat,0.5,280,Ghana
+115,Cocoa,1.98,48,Ivory Coast
+116,Cocoa,1.82,86,Ivory Coast
+117,Corn,0.36,115,Panema
+118,Wheat,0.48,75,Ghana
+119,Cocoa,1.83,264,Ivory Coast
+120,Corn,0.31,115,Panema
+121,Coffee,0.31,310,Guatemala
+122,Corn,0.34,181,Panema
+123,Corn,0.31,80,Panema
+124,Wheat,0.48,358,Ghana
+125,Corn,0.32,160,Panema
+126,Corn,0.29,16,Panema
+127,Wheat,0.47,412,Ghana
+128,Wheat,0.47,468,Ghana
+129,Coffee,0.36,35,Guatemala
+130,Wheat,0.42,349,Ghana
+131,Corn,0.31,303,Panema
+132,Coffee,0.33,462,Guatemala
+133,Wheat,0.48,439,Ghana
+134,Wheat,0.47,242,Ghana
+135,Corn,0.35,306,Panema
+136,Cocoa,1.96,26,Ivory Coast
+137,Corn,0.33,209,Panema
+138,Cocoa,1.89,478,Ivory Coast
+139,Corn,0.32,294,Panema
+140,Cocoa,1.94,414,Ivory Coast
+141,Cocoa,1.81,259,Ivory Coast
+142,Wheat,0.43,238,Ghana
+143,Coffee,0.34,276,Guatemala
+144,Coffee,0.29,378,Guatemala
+145,Corn,0.29,31,Panema
+146,Coffee,0.36,455,Guatemala
+147,Corn,0.32,93,Panema
+148,Corn,0.33,276,Panema
+149,Corn,0.32,336,Panema
+150,Coffee,0.33,11,Guatemala
+151,Cocoa,1.82,144,Ivory Coast
+152,Coffee,0.29,46,Guatemala
+153,Wheat,0.4,308,Ghana
+154,Wheat,0.45,297,Ghana
+155,Corn,0.31,237,Panema
+156,Corn,0.36,140,Panema
+157,Wheat,0.45,97,Ghana
+158,Corn,0.29,50,Panema
+159,Wheat,0.43,441,Ghana
+160,Wheat,0.48,152,Ghana
+161,Cocoa,1.92,117,Ivory Coast
+162,Corn,0.34,177,Panema
+163,Cocoa,1.96,158,Ivory Coast
+164,Cocoa,1.81,467,Ivory Coast
+165,Wheat,0.45,49,Ghana
+166,Coffee,0.33,410,Guatemala
+167,Cocoa,1.91,141,Ivory Coast
+168,Coffee,0.39,351,Guatemala
+169,Coffee,0.38,426,Guatemala
+170,Cocoa,1.98,200,Ivory Coast
+171,Corn,0.33,193,Panema
+172,Wheat,0.48,78,Ghana
+173,Coffee,0.3,226,Guatemala
+174,Corn,0.33,141,Panema
+175,Corn,0.38,410,Panema
+176,Wheat,0.42,14,Ghana
+177,Coffee,0.38,91,Guatemala
+178,Wheat,0.48,253,Ghana
+179,Corn,0.36,449,Panema
+180,Coffee,0.35,199,Guatemala
+181,Wheat,0.48,191,Ghana
+182,Coffee,0.35,153,Guatemala
+183,Cocoa,1.9,455,Ivory Coast
+184,Wheat,0.41,20,Ghana
+185,Corn,0.38,208,Panema
+186,Corn,0.28,81,Panema
+187,Wheat,0.47,88,Ghana
+188,Coffee,0.36,320,Guatemala
+189,Coffee,0.32,158,Guatemala
+190,Coffee,0.33,456,Guatemala
+191,Corn,0.3,137,Panema
+192,Corn,0.28,147,Panema
+193,Cocoa,1.84,308,Ivory Coast
+194,Corn,0.34,321,Panema
+195,Coffee,0.39,31,Guatemala
+196,Cocoa,1.95,45,Ivory Coast
+197,Cocoa,1.87,303,Ivory Coast
+198,Cocoa,1.86,166,Ivory Coast
+199,Coffee,0.32,26,Guatemala
