@@ -153,21 +153,6 @@ def create_order():
         global orders
 
         fetch_orders()
-        # if (orders.get('rows') == None):
-        #     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
-
-        #     blob_service_client = BlobServiceClient.from_connection_string(
-        #         connect_str)
-
-        #     # Create the container
-        #     container_client = blob_service_client.get_container_client(
-        #         'user-info')
-
-        #     blob_client = blob_service_client.get_blob_client(
-        #         container='user-info', blob='data.json')
-
-        #     res = blob_client.download_blob().readall()
-        #     orders = json.loads(res)
 
         post_message = body
         val = body.split()
@@ -177,8 +162,9 @@ def create_order():
         crop = val[0]
         price = val[1]
         quantity = val[2]
-        parsed = {"id": len(orders['rows']), "crop": crop,
-                  "price": price, "quantity": quantity}
+        jobId = len(orders['rows'])
+        parsed = {"id": jobId, "crop": crop,
+                  "price": price, "quantity": quantity, "status": 'Available'}
         orders['rows'] += [parsed]
 
         download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
@@ -189,6 +175,10 @@ def create_order():
 
         resp.message(
             f'Message received by GoFarm. Product {val[0]} placed on market.')
+
+        row = {"Job ID": jobId, "Crop Type": crop, "Price": price,
+               "Quantity": quantity, "Location": "Ghana"}  # TODO change form
+        call_mel(row)
 
         return str(resp)
 
@@ -206,53 +196,17 @@ def post_order():
     price = val[1]
     quantity = val[2]
     parsed = {"id": len(orders['rows']), "crop": cocoa,
-              "price": price, "quantity": quantity}
+              "price": price, "quantity": quantity, "status": 'Available'}
     orders['rows'] += [parsed]
     return json.dumps({'update': True, 'data': parsed})
 
 
 # for testing
 @ app.route('/call_mel', methods=['POST'])
-def call_mel():
+def call_mel(row):
     data = {
         "Inputs": {
-            "WebServiceInput0": [
-                {
-                    "Job ID": 0,
-                    "Crop Type": "Wheat",
-                    "Price": 0.45,
-                    "Quantity": 33,
-                    "Location": "Ghana"
-                },
-                {
-                    "Job ID": 1,
-                    "Crop Type": "Cocoa",
-                    "Price": 1.86,
-                    "Quantity": 497,
-                    "Location": "Ivory Coast"
-                },
-                {
-                    "Job ID": 2,
-                    "Crop Type": "Corn",
-                    "Price": 0.33,
-                    "Quantity": 459,
-                    "Location": "Panema"
-                },
-                {
-                    "Job ID": 3,
-                    "Crop Type": "Cocoa",
-                    "Price": 1.92,
-                    "Quantity": 401,
-                    "Location": "Ivory Coast"
-                },
-                {
-                    "Job ID": 4,
-                    "Crop Type": "Cocoa",
-                    "Price": 1.95,
-                    "Quantity": 489,
-                    "Location": "Ivory Coast"
-                }
-            ]
+            "WebServiceInput0": [row]
         },
         "GlobalParameters": {}
     }
@@ -266,11 +220,21 @@ def call_mel():
                'Authorization': ('Bearer ' + api_key)}
 
     req = urllib.request.Request(url, body, headers)
+    jobId = row['Job ID']  # TODO get less hard
+    global orders
 
     try:
         response = urllib.request.urlopen(req)
         result = response.read()
-        print(result)
+        price_suggestion = json.loads(
+            result)['Results']['WebServiceOutput0'][0]['Scored Labels']
+        fetch_orders()
+        print(price_suggestion)
+        orders['rows'][jobId]['price'] = round(price_suggestion, 2)
+        download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
+        with open(download_file_path, 'w') as download_file:
+            download_file.write(json.dumps(orders, indent=4))
+        upload_orders()
         return json.dumps({'success': True})
     except urllib.error.HTTPError as error:
         print("The request failed with status code: " + str(error.code))

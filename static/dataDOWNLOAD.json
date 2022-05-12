@@ -14,7 +14,7 @@
             "crop": "Wheat",
             "price": "10",
             "quantity": "105",
-            "status": "Available"
+            "status": "Purchased"
         },
         {
             "id": 2,
@@ -33,7 +33,7 @@
         {
             "id": 4,
             "crop": "Cocoa",
-            "price": "14",
+            "price": 1.89,
             "quantity": "65",
             "status": "Purchased"
         },
@@ -112,7 +112,7 @@
             "crop": "Cocoa",
             "price": "15",
             "quantity": "93",
-            "status": "Available"
+            "status": "Purchased"
         },
         {
             "id": 16,
@@ -168,14 +168,14 @@
             "crop": "Cocoa",
             "price": "20",
             "quantity": "304",
-            "status": "Available"
+            "status": "Purchased"
         },
         {
             "id": 24,
             "crop": "Cocoa",
             "price": "14",
             "quantity": "100",
-            "status": "Available"
+            "status": "Purchased"
         },
         {
             "id": 25,
@@ -183,6 +183,19 @@
             "price": "25",
             "quantity": "50",
             "status": "Available"
+        },
+        {
+            "id": 26,
+            "crop": "Wheat",
+            "price": "3",
+            "quantity": "30",
+            "status": "Available"
+        },
+        {
+            "id": 27,
+            "crop": "Corn",
+            "price": "50",
+            "quantity": "50"
         }
     ]
 }
