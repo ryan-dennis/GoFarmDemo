@@ -176,8 +176,14 @@ def create_order():
         resp.message(
             f'Message received by GoFarm. Product {val[0]} placed on market.')
 
+        sup = 0
+        for row in orders['rows']:
+            sup += int(row['quantity']) if row['crop'] == crop else 0
+
+        dem = sup  # TODO too hard
+
         row = {"Job ID": jobId, "Crop Type": crop, "Price": price,
-               "Quantity": quantity, "Location": "Ghana"}  # TODO change form
+               "Quantity": quantity, "Location": "Ghana", "Supply": sup, "Demand": dem}  # TODO change form
         call_mel(row)
 
         return str(resp)
@@ -213,14 +219,14 @@ def call_mel(row):
 
     body = str.encode(json.dumps(data))
 
-    url = 'http://20.85.207.77:80/api/v1/service/modelpredict/score'
+    url = 'http://20.85.207.77:80/api/v1/service/supdemmodel/score'
     # Replace this with the API key for the web service
-    api_key = 'X6Up7Q4LSDhUqUv0lOH2dIpHb0jLh5tG'
+    api_key = 'Bj3NtV5EO9NySJlmzPhQJ5kwVzyKUcd4'
     headers = {'Content-Type': 'application/json',
                'Authorization': ('Bearer ' + api_key)}
 
     req = urllib.request.Request(url, body, headers)
-    jobId = row['Job ID']  # TODO get less hard
+    jobId = row['Job ID']
     global orders
 
     try:
@@ -230,7 +236,7 @@ def call_mel(row):
             result)['Results']['WebServiceOutput0'][0]['Scored Labels']
         fetch_orders()
         print(price_suggestion)
-        orders['rows'][jobId]['price'] = round(price_suggestion, 2)
+        orders['rows'][jobId]['price'] = max(round(price_suggestion, 2), 0.1)
         download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
         with open(download_file_path, 'w') as download_file:
             download_file.write(json.dumps(orders, indent=4))
