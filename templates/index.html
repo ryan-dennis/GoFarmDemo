@@ -1,16 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <title>Hello Azure - Python Quickstart</title>
-  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}"> -->
-  <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" /> -->
+  <meta charset="utf-8" />
+  <title>Order Selection</title>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<<<<<<< HEAD
   <!-- <link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.css"> -->
+=======
+>>>>>>> d5888f9aceb7ae75354028ffabc458c7e4f3276c
   <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/fresh-bootstrap-table.css') }}">
-  <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css"> -->
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- <link href="assets/css/fresh-bootstrap-table.css" rel="stylesheet" /> -->
 
   <!-- Fonts and icons -->
   <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
@@ -18,37 +20,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+<<<<<<< HEAD
+=======
+
+  <style>
+    .titles {
+      float: left;
+      padding-left: 1em;
+      clear: both;
+    }
+  </style>
+>>>>>>> d5888f9aceb7ae75354028ffabc458c7e4f3276c
 </head>
-<html>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-white bg-white">
-    <div class="container px-5">
-        <a class="navbar-brand" href="#!">Go Farm!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Vendor</a></li>
-                <li class="nav-item"><a class="nav-link" href="driver.html">Driver</a></li>
-            </ul>
-        </div>
+  <nav class="navmel navmel-expand-lg navmel-dark bg-secondary">
+    <div class="container px-5" style="font-size: large; justify-content: space-between; padding: .5rem;">
+      <a class="navmel-brand" style="font-size: x-large;" href="./home">GoFarm!</a>
+      <button class="navmel-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmelSupportedContent"
+        aria-controls="navmelSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navmel-toggler-icon"></span></button>
+      <div class="collapse navmel-collapse" id="navmelSupportedContent">
+        <ul class="navmel-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="./home">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">Vendor</a></li>
+          <li class="nav-item"><a class="nav-link" href="./driver">Driver</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
+
   <main>
+    <br>
     <div class="container">
-      <br>
-      <h2>Posted Orders This Week</h2>
-      <!-- <div class="float-end">
-        <button type="button" class="btn btn-sm btn-secondary" onclick="purchase_order(this)">ring ring
-          woman</button><br><br>
-      </div> -->
-      <!-- <table class="table-striped" data-header-style="headerStyle" data-toggle="orderTable" id="orderTable"
-        data-search="true" data-search-align="left" data-url="{{ url_for('static', filename='dataDOWNLOAD.json') }}"
-        data-height="700" data-buttons-class="primary" data-auto-refresh="true" data-filter-control="true"
-        data-show-columns="true" data-show-refresh="true" data-virtual-scroll="true"> -->
       <div class="fresh-table toolbar-color-azure">
+        <div class="titles">
+          <h2 class="text-light">Posted Orders</h2>
+        </div>
         <table id="orderTable" data-url="{{ url_for('static', filename='dataDOWNLOAD.json') }}" class="table">
           <thead>
             <tr>
@@ -76,10 +85,10 @@
   <script type="text/javascript">
     window.operateEvents = {
       'click .purchase': function (e, value, row, index) {
-        if (row['status'] === 'Purchased') {
+        if (row['status'] === 'Purchased') { // TODO better avail check
           alert("Product already purchased. Please choose another.");
         } else {
-          purchase_order(row['id']);
+          purchase_order(row['id'], row['price'], row['quantity']);
         }
       }
     }
@@ -87,13 +96,10 @@
     function operateFormatter(value, row, index) {
       return [
         '<a rel="tooltip" title="Order" class="table-action purchase" href="javascript:void(0)" title="Order">',
-        '<i class="fa-solid fa-cart-shopping"></i>'
+        '<i class="fa-solid fa-lg fa-cart-shopping"></i>'
       ].join('')
     }
 
-    // $(function () {
-    //   $('#orderTable').bootstrapTable()
-    // })
     $(function () {
       $('#orderTable').bootstrapTable({
         classes: 'table table-hover table-bordered table-striped',
@@ -108,7 +114,7 @@
         pagination: true,
         striped: true,
         sortable: true,
-        pageSize: 12,
+        pageSize: 11,
         pageList: [10, 12, 25, 50, 100],
 
         formatShowingRows: function (pageFrom, pageTo, totalRows) {
@@ -128,37 +134,15 @@
     // }
     $('#orderTable').on('refresh.bs.table', function () {
       fetch_orders();
+      // call_mel();
     })
 
-    function purchase_order(n) {
+    function purchase_order(n, p, q) {
       $.ajax({
         type: "POST",
         url: "/purchase_order/" + n
       }).done(() => {
-        alert('Order placed!');
-      });
-    }
-
-    function add_row() {
-      $.ajax({
-        type: "POST",
-        url: "/add_row"
-      }).done(function (data) {
-        var json = JSON.parse(data);
-        if (json['update']) {
-          var table = document.getElementById("orderTable");
-          var row = document.createElement('li');
-          row.innerHTML = [
-            '<div class="col col-1" data-label="Job Id">42801</div>',
-            '<div class="col col-2" data-label="Customer Name">' + json.data.crop_type + '</div>',
-            '<div class="col col-3" data-label="Amount">$' + json.data.price + '</div>',
-            '<div class="col col-4" data-label="Payment Status">' + json.data.quantity + ' Kg</div>',
-            '<div class="col col-5" data-label="Payment Status"><button type="button" class="btn btn-success"',
-            'onclick="purchase_order(this)">Order</button></div>'
-          ].join('');
-          row.className = 'table-row';
-          table.insertBefore(row, document.getElementById('firstEntry'));
-        }
+        alert('Order placed! Total Cost: $' + p * q);
       });
     }
 

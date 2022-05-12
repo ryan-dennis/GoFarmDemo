@@ -1,121 +1,256 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Responsive Table + Detail View</title>
-  <link rel="stylesheet" href="../css/style.css"/>
-  <!-- <link rel="stylesheet" href="../css/styles.css"/> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Route Selection</title>
+  <!-- Stylesheets -->
+  <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/fresh-bootstrap-table.css') }}">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.css" type="text/css">
+
+  <!-- Fonts and icons -->
+  <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Roboto:400,700,300" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .titles {
+      float: left;
+      padding-left: 1em;
+      clear: both;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #myMap {
+      height: 100vh;
+      width: 100vw;
+      padding: 0;
+    }
+  </style>
 
 </head>
-<nav class="navbar navbar-expand-lg navbar-white bg-white">
-    <div class="container px-5">
-        <a class="navbar-brand" href="#!">Go Farm!</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="home.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html">Vendor</a></li>
-                <li class="nav-item"><a class="nav-link" href="driver.html">Driver</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<body>
-        <h1>
-            Would you like to schedule a ride?
-        </h1>
-        <p>
-            Sort By:
-        </p>
-          <main>
-            <table>
-              <thead>
-                <tr>
-                  <th>
-                    Destination
-                  </th>
-                  <th>
-                    Round Trip time
-                  </th>
-                  <th>
-                    Amount Paid
-                  </th>
-                  <th>
-                </th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td data-title='Destination'>
-                    [-106.66894, 35.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    40 minutes
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $30
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-106.66494, 34.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    30 min
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $25
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-103.66894, 32.11379]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    27 min
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $23
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <td data-title='Destination'>
-                    [-105.66894, 37.11479]
-                  </td>
-                  <td data-title='Round Trip time'>
-                    34 minutes
-                  </td>
-                  <td data-title='Amount Paid'>
-                    $32
-                  </td>
-                  <td class='select'>
-                    <a class='button' href='MapRoute.html'>
-                      Select
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            </div>
-          </main>
 
-<!-- partial:index.partial.html -->
+<body>
+  <nav class="navmel navmel-expand-lg navmel-dark bg-secondary">
+    <div class="container px-5" style="font-size: large; justify-content: space-between; padding: .5rem;">
+      <a class="navmel-brand" style="font-size: x-large;" href="./home">GoFarm!</a>
+      <button class="navmel-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmelSupportedContent"
+        aria-controls="navmelSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+          class="navmel-toggler-icon"></span></button>
+      <div class="collapse navmel-collapse" id="navmelSupportedContent">
+        <ul class="navmel-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" aria-current="page" href="./home">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./">Vendor</a></li>
+          <li class="nav-item"><a class="nav-link" href="./driver">Driver</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div id="myMap" style="display: none;"></div>
+    <div id="wrapper" class="container">
+      <br>
+      <div class="fresh-table toolbar-color-blue">
+        <div class="titles">
+          <h2 class="text-light">Posted Routes</h2>
+        </div>
+        <table id="routeTable" data-url="{{ url_for('static', filename='routes.json') }}" class="table">
+          <thead>
+            <tr>
+              <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
+              <th data-field="destination" data-sortable="true">Destination</th>
+              <th data-field="time" data-filter-control="input" data-sortable="true">Round-Trip Time (minutes)</th>
+              <th data-field="price" data-filter-control="input" data-sortable="true">Payment ($)</th>
+              <th data-field="action" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">
+                Action</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js"></script>
+  <script
+    src="https://unpkg.com/bootstrap-table@1.20.0/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+  <script src="https://atlas.microsoft.com/sdk/javascript/mapcontrol/2/atlas.min.js"></script>
+  <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
+
+  <script type="text/javascript">
+    var startCoords = [-117.251829, 32.954890];
+
+    window.operateEvents = {
+      'click .purchase': function (e, value, row, index) {
+        GetMap(startCoords[0], startCoords[1], row.coords[0], row.coords[1]);
+        $('#wrapper').hide()
+      }
+    }
+
+    function operateFormatter(value, row, index) {
+      return [
+        '<a rel="tooltip" title="Order" class="table-action purchase" href="javascript:void(0)" title="Order">',
+        '<i class="fa-solid fa-lg fa-car"></i>'
+      ].join('')
+    }
+
+    $(function () {
+      $('#routeTable').bootstrapTable({
+        classes: 'table table-hover table-bordered table-striped',
+        // toolbar: '.toolbar',
+
+        search: true,
+        searchAlign: 'left',
+        showRefresh: true,
+        showToggle: true,
+        showColumns: true,
+        buttonsClass: 'light',
+        pagination: true,
+        striped: true,
+        sortable: true,
+        pageSize: 11,
+        pageList: [10, 12, 25, 50, 100],
+
+        formatShowingRows: function (pageFrom, pageTo, totalRows) {
+          return ''
+        },
+        formatRecordsPerPage: function (pageNumber) {
+          return pageNumber + ' rows visible'
+        }
+      })
+    })
+
+    $('#routeTable').on('refresh.bs.table', function () {
+      fetch_routes();
+    })
+
+    function fetch_routes() {
+      $.ajax({
+        type: "POST",
+        url: "/fetch_routes"
+      }).done(function (data) {
+        var json = JSON.parse(data);
+        console.log(json.rows);
+      });
+    }
+
+    var map, datasource, client;
+
+    function time(number) {
+      var hours = Math.floor(number / 3600);
+      var seconds = Math.ceil((number - (hours * 3600)) / 60);
+      return hours + " hr " + seconds + " min"
+    }
+
+    function GetMap(startLong, startLat, endLong, endLat) {
+      document.getElementById('myMap').style.display = 'block';
+      // $('#myMap').show();
+      //onload="GetMap(-117.251829, 32.954890, -106.66894, 35.11379)"
+      //Add Map Control JavaScript code here.
+      //Instantiate a map object
+      var map = new atlas.Map('myMap', {
+        // Replace <Your Azure Maps Key> with your Azure Maps primary subscription key. https://aka.ms/am-primaryKey
+        authOptions: {
+          authType: 'subscriptionKey',
+          subscriptionKey: 'uKaIQorGSXWUpjBLXiN8buhKZ2wcUKnZ8hcQuLHD5OM'
+        }
+      });
+      //Wait until the map resources are ready.
+      map.events.add('ready', function () {
+
+        var popupTemplate = '<div class="customInfobox"><div class="name">{name}</div>{description}</div>';
+
+        //Create a data source and add it to the map.
+        datasource = new atlas.source.DataSource();
+        map.sources.add(datasource);
+
+        //Add a layer for rendering the route lines and have it render under the map labels.
+        map.layers.add(new atlas.layer.LineLayer(datasource, null, {
+          strokeColor: '#2272B9',
+          strokeWidth: 5,
+          lineJoin: 'round',
+          lineCap: 'round'
+        }), 'labels');
+
+        //Add a layer for rendering point data.
+        map.layers.add(new atlas.layer.SymbolLayer(datasource, null, {
+          iconOptions: {
+            image: ['get', 'icon'],
+            allowOverlap: true
+          },
+          textOptions: {
+            textField: ['get', 'title'],
+            offset: [0, 1.2]
+          },
+          filter: ['any', ['==', ['geometry-type'], 'Point'], ['==', ['geometry-type'], 'MultiPoint']] //Only render Point or MultiPoints in this layer.
+        }));
+        //Create the GeoJSON objects which represent the start and end points of the route.
+        var startPoint = new atlas.data.Feature(new atlas.data.Point([startLong, startLat]), {
+          title: "Stef House",
+          icon: "pin-blue"
+        });
+
+        var endPoint = new atlas.data.Feature(new atlas.data.Point([endLong, endLat]), {
+          title: "ABQ",
+          icon: "pin-red"
+        });
+        //Add the data to the data source.
+        datasource.add([startPoint, endPoint]);
+
+        map.setCamera({
+          bounds: atlas.data.BoundingBox.fromData([startPoint, endPoint]),
+          padding: 80
+        });
+        //Use MapControlCredential to share authentication between a map control and the service module.
+        var pipeline = atlas.service.MapsURL.newPipeline(new atlas.service.MapControlCredential(map));
+
+        //Construct the RouteURL object
+        var routeURL = new atlas.service.RouteURL(pipeline);
+        //Start and end point input to the routeURL
+        var coordinates = [[startPoint.geometry.coordinates[0], startPoint.geometry.coordinates[1]], [endPoint.geometry.coordinates[0], endPoint.geometry.coordinates[1]]];
+        popup = new atlas.Popup({
+          pixelOffset: [0, -18],
+          closeButton: false
+        });
+        var seconds;
+        //Make a search route request
+        routeURL.calculateRouteDirections(atlas.service.Aborter.timeout(10000), coordinates).then((directions) => {
+          //Get data features from response
+          var data = directions.geojson.getFeatures();
+          seconds = directions.routes[0].summary.travelTimeInSeconds;
+          datasource.add(data);
+          var popup = new atlas.Popup({
+            content: '<div style="padding:10px;color:white">' + time(seconds) + '</div>',
+            position: [endLong, endLat],
+            fillColor: 'rgba(0,0,0,0.8)',
+            closeButton: false
+          });
+
+          popup.open(map);
+        });
+      });
+    }
+
+
+  </script>
+
+  <!-- partial:index.partial.html -->
 
 </body>
+
 </html>
