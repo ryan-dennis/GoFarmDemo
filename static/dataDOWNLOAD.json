@@ -2,187 +2,187 @@
     "total": 800,
     "totalNotFiltered": 800,
     "rows": [
-      {
-        "id": 0,
-        "crop": "Cocoa",
-        "price": "0",
-        "quantity": "38",
-        "status": "Available"
-      },
-      {
-        "id": 1,
-        "crop": "Wheat",
-        "price": "1",
-        "quantity": "105",
-        "status": "Available"
-      },
-      {
-        "id": 2,
-        "crop": "Wheat",
-        "price": "2",
-        "quantity": "90",
-        "status": "Available"
-      },
-      {
-        "id": 3,
-        "crop": "Wheat",
-        "price": "3",
-        "quantity": "210",
-        "status": "Available"
-      },
-      {
-        "id": 4,
-        "crop": "Cocoa",
-        "price": "4",
-        "quantity": "65",
-        "status": "Available"
-      },
-      {
-        "id": 5,
-        "crop": "Cocoa",
-        "price": "5",
-        "quantity": "340",
-        "status": "Available"
-      },
-      {
-        "id": 6,
-        "crop": "Cocoa",
-        "price": "6",
-        "quantity": "50",
-        "status": "Available"
-      },
-      {
-        "id": 7,
-        "crop": "Cocoa",
-        "price": "7",
-        "quantity": "145",
-        "status": "Available"
-      },
-      {
-        "id": 8,
-        "crop": "Cocoa",
-        "price": "8",
-        "quantity": "93",
-        "status": "Available"
-      },
-      {
-        "id": 9,
-        "crop": "Cocoa",
-        "price": "9",
-        "quantity": "438",
-        "status": "Available"
-      },
-      {
-        "id": 10,
-        "crop": "Corn",
-        "price": "10",
-        "quantity": "174",
-        "status": "Available"
-      },
-      {
-        "id": 11,
-        "crop": "Corn",
-        "price": "11",
-        "quantity": "81",
-        "status": "Available"
-      },
-      {
-        "id": 12,
-        "crop": "Cocoa",
-        "price": "12",
-        "quantity": "10",
-        "status": "Available"
-      },
-      {
-        "id": 13,
-        "crop": "Cocoa",
-        "price": "13",
-        "quantity": "70",
-        "status": "Available"
-      },
-      {
-        "id": 14,
-        "crop": "Cocoa",
-        "price": "14",
-        "quantity": "101",
-        "status": "Available"
-      },
-      {
-        "id": 15,
-        "crop": "Cocoa",
-        "price": "15",
-        "quantity": "93",
-        "status": "Available"
-      },
-      {
-        "id": 16,
-        "crop": "Grain",
-        "price": "16",
-        "quantity": "74",
-        "status": "Available"
-      },
-      {
-        "id": 17,
-        "crop": "Cocoa",
-        "price": "17",
-        "quantity": "432",
-        "status": "Available"
-      },
-      {
-        "id": 18,
-        "crop": "Cocoa",
-        "price": "18",
-        "quantity": "118",
-        "status": "Available"
-      },
-      {
-        "id": 19,
-        "crop": "Cocoa",
-        "price": "19",
-        "quantity": "20",
-        "status": "Available"
-      },
-      {
-        "id": 20,
-        "crop": "Grain",
-        "price": "20",
-        "quantity": "27",
-        "status": "Available"
-      },
-      {
-        "id": 21,
-        "crop": "Cocoa",
-        "price": "21",
-        "quantity": "68",
-        "status": "Available"
-      },
-      {
-        "id": 22,
-        "crop": "Cocoa",
-        "price": "22",
-        "quantity": "15",
-        "status": "Available"
-      },
-      {
-        "id": 23,
-        "crop": "Cocoa",
-        "price": "23",
-        "quantity": "304",
-        "status": "Available"
-      },
-      {
-        "id": 24,
-        "crop": "Cocoa",
-        "price": "24",
-        "quantity": "100",
-        "status": "Available"
-      },
-      {
-        "id": 25,
-        "crop": "Cocoa",
-        "price": "25",
-        "quantity": "50",
-        "status": "Available"
-      }
+        {
+            "id": 0,
+            "crop": "Cocoa",
+            "price": "0",
+            "quantity": "38",
+            "status": "Purchased"
+        },
+        {
+            "id": 1,
+            "crop": "Wheat",
+            "price": "1",
+            "quantity": "105",
+            "status": "Available"
+        },
+        {
+            "id": 2,
+            "crop": "Wheat",
+            "price": "2",
+            "quantity": "90",
+            "status": "Purchased"
+        },
+        {
+            "id": 3,
+            "crop": "Wheat",
+            "price": "3",
+            "quantity": "210",
+            "status": "Available"
+        },
+        {
+            "id": 4,
+            "crop": "Cocoa",
+            "price": "4",
+            "quantity": "65",
+            "status": "Purchased"
+        },
+        {
+            "id": 5,
+            "crop": "Cocoa",
+            "price": "5",
+            "quantity": "340",
+            "status": "Purchased"
+        },
+        {
+            "id": 6,
+            "crop": "Cocoa",
+            "price": "6",
+            "quantity": "50",
+            "status": "Available"
+        },
+        {
+            "id": 7,
+            "crop": "Cocoa",
+            "price": "7",
+            "quantity": "145",
+            "status": "Available"
+        },
+        {
+            "id": 8,
+            "crop": "Cocoa",
+            "price": "8",
+            "quantity": "93",
+            "status": "Purchased"
+        },
+        {
+            "id": 9,
+            "crop": "Cocoa",
+            "price": "9",
+            "quantity": "438",
+            "status": "Available"
+        },
+        {
+            "id": 10,
+            "crop": "Corn",
+            "price": "10",
+            "quantity": "174",
+            "status": "Available"
+        },
+        {
+            "id": 11,
+            "crop": "Corn",
+            "price": "11",
+            "quantity": "81",
+            "status": "Available"
+        },
+        {
+            "id": 12,
+            "crop": "Cocoa",
+            "price": "12",
+            "quantity": "10",
+            "status": "Available"
+        },
+        {
+            "id": 13,
+            "crop": "Cocoa",
+            "price": "13",
+            "quantity": "70",
+            "status": "Available"
+        },
+        {
+            "id": 14,
+            "crop": "Cocoa",
+            "price": "14",
+            "quantity": "101",
+            "status": "Available"
+        },
+        {
+            "id": 15,
+            "crop": "Cocoa",
+            "price": "15",
+            "quantity": "93",
+            "status": "Available"
+        },
+        {
+            "id": 16,
+            "crop": "Grain",
+            "price": "16",
+            "quantity": "74",
+            "status": "Available"
+        },
+        {
+            "id": 17,
+            "crop": "Cocoa",
+            "price": "17",
+            "quantity": "432",
+            "status": "Available"
+        },
+        {
+            "id": 18,
+            "crop": "Cocoa",
+            "price": "18",
+            "quantity": "118",
+            "status": "Available"
+        },
+        {
+            "id": 19,
+            "crop": "Cocoa",
+            "price": "19",
+            "quantity": "20",
+            "status": "Available"
+        },
+        {
+            "id": 20,
+            "crop": "Grain",
+            "price": "20",
+            "quantity": "27",
+            "status": "Available"
+        },
+        {
+            "id": 21,
+            "crop": "Cocoa",
+            "price": "21",
+            "quantity": "68",
+            "status": "Available"
+        },
+        {
+            "id": 22,
+            "crop": "Cocoa",
+            "price": "22",
+            "quantity": "15",
+            "status": "Available"
+        },
+        {
+            "id": 23,
+            "crop": "Cocoa",
+            "price": "23",
+            "quantity": "304",
+            "status": "Available"
+        },
+        {
+            "id": 24,
+            "crop": "Cocoa",
+            "price": "24",
+            "quantity": "100",
+            "status": "Available"
+        },
+        {
+            "id": 25,
+            "crop": "Cocoa",
+            "price": "25",
+            "quantity": "50",
+            "status": "Available"
+        }
     ]
-  }
+}

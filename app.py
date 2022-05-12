@@ -61,7 +61,7 @@ def fetch_orders():
     return json.dumps(orders)
 
 
-def add_order():
+def upload_orders():
     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 
     # Create the BlobServiceClient object
@@ -81,8 +81,8 @@ def add_order():
         blob_client.upload_blob(data, overwrite=True)
 
 
-@ app.route('/purchase_order', methods=['POST'])
-def purchase_order():
+@ app.route('/purchase_order/<num>', methods=['POST'])
+def purchase_order(num):
     account_sid = os.environ.get('TWILIO_ACCOUNT')
     auth_token = os.environ.get('TWILIO_AUTH')
     client = Client(account_sid, auth_token)
@@ -91,6 +91,16 @@ def purchase_order():
         from_='+16094453791',
         body='Order placed. Driver will pickup the product tomorrow at 3:00pm.'
     )
+
+    global orders
+    fetch_orders()
+    print(num)
+    # order_id = request.args.get('id')
+    orders['rows'][int(num)]['status'] = 'Purchased'
+    download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
+    with open(download_file_path, 'w') as download_file:
+        download_file.write(json.dumps(orders, indent=4))
+    upload_orders()
     return message.sid
 
 
@@ -102,6 +112,24 @@ def create_order():
 
         global post_message
         global orders
+
+        fetch_orders()
+        # if (orders.get('rows') == None):
+        #     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+
+        #     blob_service_client = BlobServiceClient.from_connection_string(
+        #         connect_str)
+
+        #     # Create the container
+        #     container_client = blob_service_client.get_container_client(
+        #         'user-info')
+
+        #     blob_client = blob_service_client.get_blob_client(
+        #         container='user-info', blob='data.json')
+
+        #     res = blob_client.download_blob().readall()
+        #     orders = json.loads(res)
+
         post_message = body
         val = body.split()
 
@@ -114,10 +142,11 @@ def create_order():
                   "price": price, "quantity": quantity}
         orders['rows'] += [parsed]
 
+        download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
         with open(download_file_path, 'w') as download_file:
             download_file.write(json.dumps(orders, indent=4))
 
-        add_order()
+        upload_orders()
 
         resp.message(
             f'Message received by GoFarm. Product {val[0]} placed on market.')
