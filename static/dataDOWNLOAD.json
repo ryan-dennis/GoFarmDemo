@@ -4,206 +4,276 @@
     "rows": [
         {
             "id": 0,
-            "crop": "Cocoa",
-            "price": "10",
+            "crop": "Cacao",
+            "price": "1.68",
             "quantity": "38",
             "status": "Purchased"
         },
         {
             "id": 1,
             "crop": "Wheat",
-            "price": "10",
+            "price": "0.40",
             "quantity": "105",
             "status": "Purchased"
         },
         {
             "id": 2,
             "crop": "Wheat",
-            "price": "20",
+            "price": "0.41",
             "quantity": "90",
             "status": "Purchased"
         },
         {
             "id": 3,
             "crop": "Wheat",
-            "price": "30",
+            "price": "0.39",
             "quantity": "210",
             "status": "Available"
         },
         {
             "id": 4,
-            "crop": "Cocoa",
-            "price": 1.89,
+            "crop": "Cacao",
+            "price": "1.89",
             "quantity": "65",
             "status": "Purchased"
         },
         {
             "id": 5,
-            "crop": "Cocoa",
-            "price": "15",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "340",
             "status": "Purchased"
         },
         {
             "id": 6,
-            "crop": "Cocoa",
-            "price": "16",
+            "crop": "Cacao",
+            "price": "1.69",
             "quantity": "50",
             "status": "Available"
         },
         {
             "id": 7,
-            "crop": "Cocoa",
-            "price": "17",
+            "crop": "Cacao",
+            "price": "1.72",
             "quantity": "145",
             "status": "Available"
         },
         {
             "id": 8,
-            "crop": "Cocoa",
-            "price": "10",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "93",
             "status": "Purchased"
         },
         {
             "id": 9,
-            "crop": "Cocoa",
-            "price": "10",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "438",
-            "status": "Available"
+            "status": "Purchased"
         },
         {
             "id": 10,
             "crop": "Corn",
-            "price": "10",
+            "price": "0.32",
             "quantity": "174",
             "status": "Available"
         },
         {
             "id": 11,
             "crop": "Corn",
-            "price": "11",
+            "price": "0.32",
             "quantity": "81",
             "status": "Available"
         },
         {
             "id": 12,
-            "crop": "Cocoa",
-            "price": "12",
+            "crop": "Cacao",
+            "price": "1.72",
             "quantity": "10",
             "status": "Available"
         },
         {
             "id": 13,
-            "crop": "Cocoa",
-            "price": "13",
+            "crop": "Cacao",
+            "price": "1.73",
             "quantity": "70",
             "status": "Available"
         },
         {
             "id": 14,
-            "crop": "Cocoa",
-            "price": "14",
+            "crop": "Cacao",
+            "price": "1.74",
             "quantity": "101",
             "status": "Available"
         },
         {
             "id": 15,
-            "crop": "Cocoa",
-            "price": "15",
+            "crop": "Cacao",
+            "price": "1.65",
             "quantity": "93",
             "status": "Purchased"
         },
         {
             "id": 16,
-            "crop": "Grain",
-            "price": "26",
+            "crop": "Coffee",
+            "price": "4.70",
             "quantity": "74",
             "status": "Available"
         },
         {
             "id": 17,
-            "crop": "Cocoa",
-            "price": "10",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "432",
             "status": "Available"
         },
         {
             "id": 18,
-            "crop": "Cocoa",
-            "price": "28",
+            "crop": "Cacao",
+            "price": "1.68",
             "quantity": "118",
             "status": "Available"
         },
         {
             "id": 19,
-            "crop": "Cocoa",
-            "price": "15",
+            "crop": "Cacao",
+            "price": "1.65",
             "quantity": "20",
             "status": "Available"
         },
         {
             "id": 20,
-            "crop": "Grain",
-            "price": "20",
+            "crop": "Coffee",
+            "price": "4.71",
             "quantity": "27",
             "status": "Available"
         },
         {
             "id": 21,
-            "crop": "Cocoa",
-            "price": "20",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "68",
             "status": "Available"
         },
         {
             "id": 22,
-            "crop": "Cocoa",
-            "price": "25",
+            "crop": "Cacao",
+            "price": "1.75",
             "quantity": "15",
             "status": "Available"
         },
         {
             "id": 23,
-            "crop": "Cocoa",
-            "price": "20",
+            "crop": "Cacao",
+            "price": "1.70",
             "quantity": "304",
             "status": "Purchased"
         },
         {
             "id": 24,
-            "crop": "Cocoa",
-            "price": "14",
+            "crop": "Cacao",
+            "price": "1.64",
             "quantity": "100",
             "status": "Purchased"
         },
         {
             "id": 25,
-            "crop": "Cocoa",
-            "price": "25",
+            "crop": "Cacao",
+            "price": "1.65",
             "quantity": "50",
             "status": "Available"
         },
         {
             "id": 26,
             "crop": "Wheat",
-            "price": "3",
+            "price": "0.39",
             "quantity": "30",
             "status": "Available"
         },
         {
             "id": 27,
             "crop": "Corn",
-            "price": "50",
+            "price": "0.35",
             "quantity": "50",
             "status": "Available"
         },
         {
             "id": 28,
             "crop": "Corn",
-            "price": 0.39,
+            "price": "0.31",
             "quantity": "100",
             "status": "Purchased"
+        },
+        {
+            "id": 29,
+            "crop": "Corn",
+            "price": "0.33",
+            "quantity": "20",
+            "status": "Available"
+        },
+        {
+            "id": 30,
+            "crop": "Corn",
+            "price": "0.34",
+            "quantity": "20",
+            "status": "Available"
+        },
+        {
+            "id": 31,
+            "crop": "Coffee",
+            "price": 4.7,
+            "quantity": "39",
+            "status": "Available"
+        },
+        {
+            "id": 32,
+            "crop": "Coffee",
+            "price": 4.7,
+            "quantity": "30",
+            "status": "Available"
+        },
+        {
+            "id": 33,
+            "crop": "Coffee",
+            "price": 4.7,
+            "quantity": "25",
+            "status": "Available"
+        },
+        {
+            "id": 34,
+            "crop": "Coffee",
+            "price": 4.88,
+            "quantity": "15",
+            "status": "Available"
+        },
+        {
+            "id": 35,
+            "crop": "Wheat",
+            "price": 0.77,
+            "quantity": "12",
+            "status": "Purchased"
+        },
+        {
+            "id": 36,
+            "crop": "Wheat",
+            "price": 0.79,
+            "quantity": "24",
+            "status": "Available"
+        },
+        {
+            "id": 37,
+            "crop": "Wheat",
+            "price": 0.8,
+            "quantity": "17",
+            "status": "Available"
+        },
+        {
+            "id": 38,
+            "crop": "Cacao",
+            "price": 3.64,
+            "quantity": "5",
+            "status": "Available"
         }
     ]
 }

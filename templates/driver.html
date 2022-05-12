@@ -67,12 +67,12 @@
         <div class="titles">
           <h2 class="text-light">Posted Routes</h2>
         </div>
-        <table id="routeTable" data-url="{{ url_for('static', filename='routes.json') }}" class="table">
+        <table id="routeTable" data-url="{{ url_for('static', filename='routesPurchased.json') }}" class="table">
           <thead>
             <tr>
               <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
               <th data-field="destination" data-sortable="true">Destination</th>
-              <th data-field="time" data-filter-control="input" data-sortable="true">Round-Trip Time (minutes)</th>
+              <th data-field="distance" data-filter-control="input" data-sortable="true">Route Length (km)</th>
               <th data-field="price" data-filter-control="input" data-sortable="true">Payment ($)</th>
               <th data-field="action" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">
                 Action</th>
