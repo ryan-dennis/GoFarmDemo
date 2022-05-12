@@ -195,7 +195,15 @@
             "id": 27,
             "crop": "Corn",
             "price": "50",
-            "quantity": "50"
+            "quantity": "50",
+            "status": "Available"
+        },
+        {
+            "id": 28,
+            "crop": "Corn",
+            "price": 0.39,
+            "quantity": "100",
+            "status": "Purchased"
         }
     ]
 }
