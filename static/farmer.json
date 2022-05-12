@@ -1,0 +1,86 @@
+{
+    "total": 800,
+    "totalNotFiltered": 800,
+    "rows": [
+        {
+            "fid": 0,
+            "coords": [
+                -1.50623,
+                8.19958
+            ],
+            "location": "Ghana"
+        },
+        {
+            "fid": 1,
+            "coords": [
+                -1.79373,
+                7.83577
+            ],
+            "location": "Ghana"
+        },
+        {
+            "fid": 2,
+            "coords": [
+                -1.00743,
+                7.79292
+            ],
+            "location": "Ghana"
+        },
+        {
+            "fid": 3,
+            "coords": [
+                -92.49489,
+                42.06738
+            ],
+            "location": "Iowa"
+        },
+        {
+            "fid": 4,
+            "coords": [
+                -99.06312,
+                41.79148
+            ],
+            "location": "Nebraska"
+        },
+        {
+            "fid": 5,
+            "coords": [
+                -62.586311,
+                -9.378653
+            ],
+            "location": "Brazil"
+        },
+        {
+            "fid": 6,
+            "coords": [
+                -63.20631,
+                -7.58447
+            ],
+            "location": "Brazil"
+        },
+        {
+            "fid": 7,
+            "coords": [
+                -73.81837,
+                4.22905
+            ],
+            "location": "Colombia"
+        },
+        {
+            "fid": 8,
+            "coords": [
+                79.83278,
+                22.83462
+            ],
+            "location": "India"
+        },
+        {
+            "fid": 9,
+            "coords": [
+                79.04514,
+                22.63389
+            ],
+            "location": "India"
+        }
+    ]
+}

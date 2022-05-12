@@ -5,121 +5,141 @@
         {
             "id": 0,
             "destination": "Ghana",
-            "distance": 1108.878,
-            "price": 1943.04,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -107.66494,
-                34.11379
+                -1.50623,
+                8.19958
             ]
         },
         {
             "id": 1,
             "destination": "India",
-            "distance": 818.799,
-            "price": 1435.4,
+            "distance": 236.151,
+            "price": 415.76,
             "coords": [
-                -110.66494,
-                34.11379
+                79.83278,
+                22.83462
             ]
         },
         {
             "id": 2,
             "destination": "India",
-            "distance": 1058.555,
-            "price": 1854.97,
+            "distance": 236.151,
+            "price": 415.76,
             "coords": [
-                -108.66494,
-                34.11379
+                79.83278,
+                22.83462
             ]
         },
         {
             "id": 4,
             "destination": "Ghana",
-            "distance": 1243.75,
-            "price": 2179.06,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -106.66494,
-                33.11379
+                -1.50623,
+                8.19958
             ]
         },
         {
             "id": 5,
             "destination": "Ghana",
-            "distance": 1253.854,
-            "price": 2196.74,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -106.66494,
-                35.11379
+                -1.50623,
+                8.19958
             ]
         },
         {
             "id": 8,
             "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -106.66494,
-                34.11379
+                -1.50623,
+                8.19958
             ]
         },
         {
             "id": 9,
             "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "distance": 146.31,
+            "price": 258.54,
             "coords": [
-                -106.66494,
-                34.11379
+                -1.00743,
+                7.79292
             ]
         },
         {
             "id": 15,
             "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -106.66494,
-                34.11379
+                -1.50623,
+                8.19958
+            ]
+        },
+        {
+            "id": 20,
+            "destination": "Brazil",
+            "distance": 222.39,
+            "price": 391.68,
+            "coords": [
+                -62.586311,
+                -9.378653
             ]
         },
         {
             "id": 23,
             "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "distance": 167.928,
+            "price": 296.37,
             "coords": [
-                -106.66494,
-                34.11379
+                -1.79373,
+                7.83577
             ]
         },
         {
             "id": 24,
             "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "distance": 235.218,
+            "price": 414.13,
             "coords": [
-                -106.66494,
-                34.11379
+                -1.50623,
+                8.19958
             ]
         },
         {
             "id": 28,
-            "destination": "Ghana",
-            "distance": 818.799,
-            "price": 1435.4,
+            "destination": "Nebraska",
+            "distance": 91.571,
+            "price": 162.75,
             "coords": [
-                -110.66494,
-                34.11379
+                -99.06312,
+                41.79148
+            ]
+        },
+        {
+            "id": 32,
+            "destination": "Colombia",
+            "distance": 93.059,
+            "price": 165.35,
+            "coords": [
+                -73.81837,
+                4.22905
             ]
         },
         {
             "id": 35,
-            "destination": "Ghana",
-            "distance": 1317.234,
-            "price": 2307.66,
+            "destination": "India",
+            "distance": 231.709,
+            "price": 407.99,
             "coords": [
-                -106.66494,
-                34.11379
+                79.04514,
+                22.63389
             ]
         }
     ]

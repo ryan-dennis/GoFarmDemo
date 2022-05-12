@@ -4,6 +4,7 @@ from twilio.rest import Client
 from twilio.twiml.messaging_response import MessagingResponse
 import json
 import os
+import random
 import urllib.request
 import requests
 import ssl
@@ -14,6 +15,7 @@ app = Flask(__name__)
 post_message = ''
 orders = {}
 routes = {}
+farmers = {}
 
 
 @app.route('/fetch_orders', methods=['POST'])
@@ -74,6 +76,29 @@ def fetch_routes():
     return json.dumps(routes)
 
 
+def fetch_farmers():
+    connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
+
+    # Create the BlobServiceClient object
+    blob_service_client = BlobServiceClient.from_connection_string(connect_str)
+
+    # Create the container
+    container_client = blob_service_client.get_container_client('user-info')
+
+    blob_client = blob_service_client.get_blob_client(
+        container='user-info', blob='farmer.json')
+
+    download_file_path = os.path.join('./static', 'farmer.json')
+
+    global farmers
+
+    res = blob_client.download_blob().readall()
+    with open(download_file_path, 'wb') as download_file:
+        download_file.write(res)
+    farmers = json.loads(res)
+    return json.dumps(farmers)
+
+
 @ app.route('/')
 def index():
     fetch_orders()
@@ -91,7 +116,7 @@ def driver():
     return render_template('driver.html')
 
 
-def upload_orders(file='dataDOWNLOAD'):
+def upload_orders(file='data'):
     connect_str = os.getenv('AZURE_STORAGE_CONNECTION_STRING')
 
     # Create the BlobServiceClient object
@@ -100,13 +125,13 @@ def upload_orders(file='dataDOWNLOAD'):
     # Create the container
     container_client = blob_service_client.get_container_client('user-info')
 
-    b = 'routes' if file == 'routes' else 'data'
     blob_client = blob_service_client.get_blob_client(
-        container='user-info', blob=f'{b}.json')
+        container='user-info', blob=f'{file}.json')
 
     # Download the blob to a local file
     # Add 'DOWNLOAD' before the .txt extension so you can see both files in the data directory
-    download_file_path = os.path.join('./static', f'{file}.json')
+    b = 'dataDOWNLOAD' if file == 'data' else file
+    download_file_path = os.path.join('./static', f'{b}.json')
 
     with open(download_file_path, "rb") as data:
         blob_client.upload_blob(data, overwrite=True)
@@ -124,15 +149,39 @@ def get_dist(lat, lon):
     return round(dist, 3)
 
 
+def init_locs():
+    global routes
+    global farmers
+    global orders
+    fetch_farmers()
+    fetch_routes()
+    fetch_orders
+    for i in range(len(routes['rows'])):
+        route = routes['rows'][i]
+        fid = orders['rows'][i]['fid']
+        coords = farmers['rows'][fid]['coords']
+        dest = farmers['rows'][fid]['location']
+        routes['rows'][i]['coords'] = coords
+        routes['rows'][i]['destination'] = dest
+    download_file_path = os.path.join('./static', 'routes.json')
+    with open(download_file_path, 'w') as download_file:
+        download_file.write(json.dumps(routes, indent=4))
+    upload_orders('routes')
+    return json.dumps({})
+
+
 def init_routes():
     global routes
     fetch_routes()
-    start = [-117.251829, 32.954890]  # TODO dynamic?
+    locs = {'Ghana': [-1.57959, 6.83710], 'Nebraska': [-99.65182, 41.39734],
+            'Iowa': [-93.49706, 41.56943], 'Colombia': [-74.21219, 4.71124], "Brazil": [-63.89716, -8.75177], "India": [79.00924, 21.16533]}
     key = "uKaIQorGSXWUpjBLXiN8buhKZ2wcUKnZ8hcQuLHD5OM"
     for i in range(len(routes['rows'])):
         route = routes['rows'][i]
+        start = locs[route['destination']]
         lat = route['coords'][0]
         lon = route['coords'][1]
+        print(start[1], start[0], lon, lat)
         response = requests.get(
             f'https://atlas.microsoft.com/route/directions/json?subscription-key={key}&api-version=1.0&query={start[1]},{start[0]}:{lon},{lat}&travelMode=car&traffic=true&computeTravelTimeFor=all')
         dist = response.json(
@@ -171,6 +220,8 @@ def purchase_order(num):
 @ app.route('/sms/reply', methods=['GET', 'POST'])
 def create_order():
     valid_crops = ['Coffee', 'Corn', 'Wheat', 'Cacao']
+    locs = {'Coffee': [4, 5, 6], 'Corn': [3, 4],
+            'Cacao': [0, 1, 2], 'Wheat': [8, 9]}
     if request.method == 'POST':
         body = request.values.get('Body', None)
         resp = MessagingResponse()
@@ -178,9 +229,11 @@ def create_order():
         global post_message
         global orders
         global routes
+        global farmers
 
         fetch_orders()
         fetch_routes()
+        fetch_farmers()
 
         post_message = body
         val = body.split()
@@ -202,8 +255,10 @@ def create_order():
                     crop = recommended[0]
         price = 0
         quantity = val[1]
+        poss = locs[crop]
+        fid = random.randint(poss[0], poss[len(poss)-1])
         jobId = len(orders['rows'])
-        parsed = {"id": jobId, "crop": crop,
+        parsed = {"id": jobId, "fid": fid, "crop": crop,
                   "price": price, "quantity": quantity, "status": 'Available'}
         orders['rows'] += [parsed]
 
@@ -211,10 +266,11 @@ def create_order():
         with open(download_file_path, 'w') as download_file:
             download_file.write(json.dumps(orders, indent=4))
 
-        coords = [-106.66494, 34.11379]  # TODO dynamic
+        farmer = farmers['rows'][fid]
+        coords = farmer['coords']
         route_dist = get_dist(coords[0], coords[1])
         new_route = {"id": jobId,
-                     "destination": "Ghana",  # TODO dynamic
+                     "destination": farmer['location'],
                      "distance": route_dist,
                      "price": round(round(route_dist, 3) * 1.75 + 2.5, 2),
                      "coords": coords}

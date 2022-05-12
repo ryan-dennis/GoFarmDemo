@@ -93,10 +93,14 @@
   <script src="https://atlas.microsoft.com/sdk/javascript/service/2/atlas-service.min.js"></script>
 
   <script type="text/javascript">
-    var startCoords = [-117.251829, 32.954890];
+    var locs = {
+      'Ghana': [-1.57959, 6.83710], 'Nebraska': [-99.65182, 41.39734],
+      'Iowa': [-93.49706, 41.56943], 'Colombia': [-74.21219, 4.71124], "Brazil": [-63.89716, -8.75177], "India": [79.00924, 21.16533]
+    }
 
     window.operateEvents = {
       'click .purchase': function (e, value, row, index) {
+        startCoords = locs[row.destination];
         GetMap(startCoords[0], startCoords[1], row.coords[0], row.coords[1]);
         $('#wrapper').hide()
       }
@@ -201,13 +205,13 @@
         }));
         //Create the GeoJSON objects which represent the start and end points of the route.
         var startPoint = new atlas.data.Feature(new atlas.data.Point([startLong, startLat]), {
-          title: "Stef House",
-          icon: "pin-blue"
+          title: "Dropoff Point",
+          icon: "pin-red"
         });
 
         var endPoint = new atlas.data.Feature(new atlas.data.Point([endLong, endLat]), {
-          title: "ABQ",
-          icon: "pin-red"
+          title: "Pickup Location",
+          icon: "pin-blue"
         });
         //Add the data to the data source.
         datasource.add([startPoint, endPoint]);
@@ -236,7 +240,7 @@
           datasource.add(data);
           var popup = new atlas.Popup({
             content: '<div style="padding:10px;color:white">' + time(seconds) + '</div>',
-            position: [endLong, endLat],
+            position: [startLong, startLat],
             fillColor: 'rgba(0,0,0,0.8)',
             closeButton: false
           });
