@@ -137,15 +137,12 @@ def upload_orders(file='data'):
         blob_client.upload_blob(data, overwrite=True)
 
 
-def get_dist(lat, lon):
-    start = [-117.251829, 32.954890]  # TODO dynamic?
+def get_dist(start, lat, lon):
     key = "uKaIQorGSXWUpjBLXiN8buhKZ2wcUKnZ8hcQuLHD5OM"
     response = requests.get(
         f'https://atlas.microsoft.com/route/directions/json?subscription-key={key}&api-version=1.0&query={start[1]},{start[0]}:{lon},{lat}&travelMode=car&traffic=true&computeTravelTimeFor=all')
     dist = response.json(
     )['routes'][0]['summary']['lengthInMeters']/1000
-    routes['rows'][i]['distance'] = round(dist, 3)
-    routes['rows'][i]['price'] = round(round(dist, 3) * 1.75 + 2.5, 2)
     return round(dist, 3)
 
 
@@ -181,7 +178,6 @@ def init_routes():
         start = locs[route['destination']]
         lat = route['coords'][0]
         lon = route['coords'][1]
-        print(start[1], start[0], lon, lat)
         response = requests.get(
             f'https://atlas.microsoft.com/route/directions/json?subscription-key={key}&api-version=1.0&query={start[1]},{start[0]}:{lon},{lat}&travelMode=car&traffic=true&computeTravelTimeFor=all')
         dist = response.json(
@@ -220,7 +216,7 @@ def purchase_order(num):
 @ app.route('/sms/reply', methods=['GET', 'POST'])
 def create_order():
     valid_crops = ['Coffee', 'Corn', 'Wheat', 'Cacao']
-    locs = {'Coffee': [4, 5, 6], 'Corn': [3, 4],
+    locs = {'Coffee': [5, 6, 7], 'Corn': [3, 4],
             'Cacao': [0, 1, 2], 'Wheat': [8, 9]}
     if request.method == 'POST':
         body = request.values.get('Body', None)
@@ -268,7 +264,10 @@ def create_order():
 
         farmer = farmers['rows'][fid]
         coords = farmer['coords']
-        route_dist = get_dist(coords[0], coords[1])
+        locs = {'Ghana': [-1.57959, 6.83710], 'Nebraska': [-99.65182, 41.39734],
+                'Iowa': [-93.49706, 41.56943], 'Colombia': [-74.21219, 4.71124], "Brazil": [-63.89716, -8.75177], "India": [79.00924, 21.16533]}
+        start = locs[farmer['location']]
+        route_dist = get_dist(start, coords[0], coords[1])
         new_route = {"id": jobId,
                      "destination": farmer['location'],
                      "distance": route_dist,
@@ -285,7 +284,7 @@ def create_order():
         upload_orders('routes')
 
         resp.message(
-            f'Message received by GoFarm. Product {val[0]} placed on market.')
+            f'Message received by GoFarm. Product {crop} placed on market.')
 
         sup = 0
         for row in orders['rows']:
