@@ -7,7 +7,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.68",
-            "quantity": "38",
+            "quantity": "3.8",
             "status": "Purchased"
         },
         {
@@ -15,7 +15,7 @@
             "fid": 8,
             "crop": "Wheat",
             "price": "0.40",
-            "quantity": "105",
+            "quantity": "10.5",
             "status": "Purchased"
         },
         {
@@ -23,7 +23,7 @@
             "fid": 8,
             "crop": "Wheat",
             "price": "0.41",
-            "quantity": "90",
+            "quantity": "2.9",
             "status": "Purchased"
         },
         {
@@ -31,7 +31,7 @@
             "fid": 9,
             "crop": "Wheat",
             "price": "0.39",
-            "quantity": "210",
+            "quantity": "2.1",
             "status": "Available"
         },
         {
@@ -39,7 +39,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.89",
-            "quantity": "65",
+            "quantity": "0.65",
             "status": "Purchased"
         },
         {
@@ -47,7 +47,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "340",
+            "quantity": "0.34",
             "status": "Purchased"
         },
         {
@@ -55,7 +55,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.69",
-            "quantity": "50",
+            "quantity": "0.5",
             "status": "Available"
         },
         {
@@ -63,7 +63,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.72",
-            "quantity": "145",
+            "quantity": "1.45",
             "status": "Available"
         },
         {
@@ -71,7 +71,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "93",
+            "quantity": "0.93",
             "status": "Purchased"
         },
         {
@@ -79,7 +79,7 @@
             "fid": 2,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "438",
+            "quantity": "4.38",
             "status": "Purchased"
         },
         {
@@ -95,7 +95,7 @@
             "fid": 3,
             "crop": "Corn",
             "price": "0.32",
-            "quantity": "81",
+            "quantity": "315",
             "status": "Available"
         },
         {
@@ -103,7 +103,7 @@
             "fid": 2,
             "crop": "Cacao",
             "price": "1.72",
-            "quantity": "10",
+            "quantity": "1",
             "status": "Available"
         },
         {
@@ -111,7 +111,7 @@
             "fid": 2,
             "crop": "Cacao",
             "price": "1.73",
-            "quantity": "70",
+            "quantity": "1.7",
             "status": "Available"
         },
         {
@@ -119,7 +119,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.74",
-            "quantity": "101",
+            "quantity": "1.01",
             "status": "Available"
         },
         {
@@ -127,7 +127,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.65",
-            "quantity": "93",
+            "quantity": "0.93",
             "status": "Purchased"
         },
         {
@@ -143,7 +143,7 @@
             "fid": 2,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "432",
+            "quantity": "4.32",
             "status": "Available"
         },
         {
@@ -151,7 +151,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.68",
-            "quantity": "118",
+            "quantity": "1.18",
             "status": "Available"
         },
         {
@@ -159,7 +159,7 @@
             "fid": 2,
             "crop": "Cacao",
             "price": "1.65",
-            "quantity": "20",
+            "quantity": "2",
             "status": "Available"
         },
         {
@@ -167,7 +167,7 @@
             "fid": 5,
             "crop": "Coffee",
             "price": "4.71",
-            "quantity": "27",
+            "quantity": "72",
             "status": "Purchased"
         },
         {
@@ -175,7 +175,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "68",
+            "quantity": "0.68",
             "status": "Available"
         },
         {
@@ -183,7 +183,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.75",
-            "quantity": "15",
+            "quantity": "1.5",
             "status": "Available"
         },
         {
@@ -191,7 +191,7 @@
             "fid": 1,
             "crop": "Cacao",
             "price": "1.70",
-            "quantity": "304",
+            "quantity": "3.04",
             "status": "Purchased"
         },
         {
@@ -199,7 +199,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.64",
-            "quantity": "100",
+            "quantity": "1",
             "status": "Purchased"
         },
         {
@@ -207,7 +207,7 @@
             "fid": 0,
             "crop": "Cacao",
             "price": "1.65",
-            "quantity": "50",
+            "quantity": "0.5",
             "status": "Available"
         },
         {
@@ -215,7 +215,7 @@
             "fid": 8,
             "crop": "Wheat",
             "price": "0.39",
-            "quantity": "30",
+            "quantity": "5.3",
             "status": "Available"
         },
         {
@@ -223,7 +223,7 @@
             "fid": 4,
             "crop": "Corn",
             "price": "0.35",
-            "quantity": "50",
+            "quantity": "550",
             "status": "Available"
         },
         {
@@ -231,7 +231,7 @@
             "fid": 4,
             "crop": "Corn",
             "price": "0.31",
-            "quantity": "100",
+            "quantity": "180",
             "status": "Purchased"
         },
         {
@@ -239,7 +239,7 @@
             "fid": 4,
             "crop": "Corn",
             "price": "0.33",
-            "quantity": "20",
+            "quantity": "320",
             "status": "Available"
         },
         {
@@ -247,7 +247,7 @@
             "fid": 3,
             "crop": "Corn",
             "price": "0.34",
-            "quantity": "20",
+            "quantity": "220",
             "status": "Available"
         },
         {
@@ -263,7 +263,7 @@
             "fid": 7,
             "crop": "Coffee",
             "price": 4.7,
-            "quantity": "30",
+            "quantity": "60",
             "status": "Purchased"
         },
         {
@@ -271,7 +271,7 @@
             "fid": 5,
             "crop": "Coffee",
             "price": 4.7,
-            "quantity": "25",
+            "quantity": "52",
             "status": "Available"
         },
         {
@@ -279,7 +279,7 @@
             "fid": 6,
             "crop": "Coffee",
             "price": 4.88,
-            "quantity": "15",
+            "quantity": "62",
             "status": "Available"
         },
         {
@@ -295,7 +295,7 @@
             "fid": 8,
             "crop": "Wheat",
             "price": 0.79,
-            "quantity": "24",
+            "quantity": "4",
             "status": "Available"
         },
         {
@@ -303,7 +303,7 @@
             "fid": 8,
             "crop": "Wheat",
             "price": 0.8,
-            "quantity": "17",
+            "quantity": "1.7",
             "status": "Available"
         },
         {
@@ -311,8 +311,16 @@
             "fid": 2,
             "crop": "Cacao",
             "price": 3.64,
-            "quantity": "5",
+            "quantity": "0.5",
             "status": "Available"
+        },
+        {
+            "id": 39,
+            "fid": 7,
+            "crop": "Coffee",
+            "price": 4.9,
+            "quantity": "20",
+            "status": "Purchased"
         }
     ]
 }

@@ -56,8 +56,8 @@
             <tr>
               <th data-valign="top" data-field="id" data-sortable="true">Job ID</th>
               <th data-field="crop" data-filter-control="select">Crop Type</th>
-              <th data-field="price" data-filter-control="input" data-sortable="true">Price ($ per Kg)</th>
-              <th data-field="quantity" data-filter-control="input" data-sortable="true">Item Quantity (Kg)</th>
+              <th data-field="price" data-formatter="priceFormatter" data-sortable="true">Price</th>
+              <th data-field="quantity" data-formatter="quantityFormatter" data-sortable="true">Item Quantity</th>
               <th data-field="status" data-filter-control="select" data-sortable="true">Status</th>
               <th data-field="action" data-formatter="operateFormatter" data-events="operateEvents" data-align="center">
                 Action</th>
@@ -91,6 +91,20 @@
         '<a rel="tooltip" title="Order" class="table-action purchase" href="javascript:void(0)" title="Order">',
         '<i class="fa-solid fa-lg fa-cart-shopping"></i>'
       ].join('')
+    }
+    // coffee in kg, corn in bushels - mult by 25.4, wheat + cacao in tonnes -- mult by 1000
+    function priceFormatter(value, row) {
+      var rates = { "Corn": 25.4, "Wheat": 1000, "Cacao": 1000, "Coffee": 1 };
+      var units = { "Corn": "bushel", "Wheat": "tonne", "Cacao": "tonne", "Coffee": "kg" };
+      let num = row.price * rates[row.crop];
+      let m = +(Math.round(num + "e+2") + "e-2");
+      let p = m.toFixed(2);
+      return '$' + p + ' per ' + units[row.crop];
+    }
+
+    function quantityFormatter(value, row) {
+      var units = { "Corn": "bushels", "Wheat": "tonnes", "Cacao": "tonnes", "Coffee": "kg" };
+      return row.quantity + ' ' + units[row.crop];
     }
 
     $(function () {
