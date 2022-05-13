@@ -16,6 +16,7 @@ post_message = ''
 orders = {}
 routes = {}
 farmers = {}
+demand = {'Cacao': 25, 'Coffee': 300, 'Corn': 1000, 'Wheat': 100}
 
 
 @app.route('/fetch_orders', methods=['POST'])
@@ -203,9 +204,12 @@ def purchase_order(num):
     )
 
     global orders
+    global demand
     fetch_orders()
     # order_id = request.args.get('id')
     orders['rows'][int(num)]['status'] = 'Purchased'
+    crop = orders['rows'][int(num)]['crop']
+    demand[crop] += orders['rows'][int(num)]['quantity']
     download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
     with open(download_file_path, 'w') as download_file:
         download_file.write(json.dumps(orders, indent=4))
@@ -226,6 +230,7 @@ def create_order():
         global orders
         global routes
         global farmers
+        global demand
 
         fetch_orders()
         fetch_routes()
@@ -290,7 +295,7 @@ def create_order():
         for row in orders['rows']:
             sup += int(row['quantity']) if row['crop'] == crop else 0
 
-        dem = 2 * sup  # TODO too hard
+        dem =  demand[crop]
         print(f"Sup: {sup}, Dem: {dem}")
 
         row = {"Job ID": jobId, "Crop Type": crop, "Price": price,
@@ -303,6 +308,7 @@ def create_order():
 # for testing
 @ app.route('/call_mel', methods=['POST'])
 def call_mel(row):
+    mindick = {"Coffee": 1.5, 'Cacao': 1500, 'Corn': 7.00, 'Wheat': 398}
     data = {
         "Inputs": {
             "WebServiceInput0": [row]
@@ -329,7 +335,8 @@ def call_mel(row):
             result)['Results']['WebServiceOutput0'][0]['Scored Labels']
         fetch_orders()
         print(price_suggestion)
-        orders['rows'][jobId]['price'] = max(round(price_suggestion, 2), 0.1)
+        crop = orders['rows'][jobId]['crop']
+        orders['rows'][jobId]['price'] = max(round(price_suggestion, 2), mindick[crop])
         download_file_path = os.path.join('./static', 'dataDOWNLOAD.json')
         with open(download_file_path, 'w') as download_file:
             download_file.write(json.dumps(orders, indent=4))
